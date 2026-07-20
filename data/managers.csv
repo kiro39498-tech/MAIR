@@ -1,0 +1,10 @@
+manager_id,manager_name,plant_id,role,notification_channel,approval_threshold_value
+MGR-001,Jeremy Thornton,PLT-US-01,Plant Manager,Email,10000
+MGR-002,Ashley Landry,PLT-US-01,Inventory Manager,Email,5000
+MGR-003,Brittany Johnson,PLT-US-01,Procurement Manager,Teams,5000
+MGR-004,Juan Jordan,PLT-DE-02,Plant Manager,Email,50000
+MGR-005,Jacob Fitzpatrick,PLT-DE-02,Inventory Manager,Teams,10000
+MGR-006,Amanda Howard,PLT-DE-02,Procurement Manager,Email,5000
+MGR-007,Mary Gomez,PLT-IN-03,Plant Manager,Teams,25000
+MGR-008,Shelly Dickson,PLT-IN-03,Inventory Manager,Teams,50000
+MGR-009,Tammy Young,PLT-IN-03,Procurement Manager,Teams,5000

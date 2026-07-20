@@ -1,0 +1,4 @@
+plant_id,plant_name,country,region,plant_type,timezone
+PLT-US-01,Cedar Falls Manufacturing,United States,North America,Manufacturing,America/Chicago
+PLT-DE-02,Ludwigshafen Assembly Works,Germany,Europe,Assembly,Europe/Berlin
+PLT-IN-03,Pune Precision Plant,India,Asia Pacific,Manufacturing,Asia/Kolkata

@@ -1,0 +1,10 @@
+warehouse_id,warehouse_name,plant_id,warehouse_type,capacity_units
+WH-01,Cedar Raw Material Store,PLT-US-01,RM,35795
+WH-02,Cedar Work-in-Progress Store,PLT-US-01,WIP,20860
+WH-03,Cedar Finished Goods Store,PLT-US-01,FG,58158
+WH-04,Ludwigshafen Raw Material Store,PLT-DE-02,RM,31284
+WH-05,Ludwigshafen Work-in-Progress Store,PLT-DE-02,WIP,26265
+WH-06,Ludwigshafen Finished Goods Store,PLT-DE-02,FG,36850
+WH-07,Pune Raw Material Store,PLT-IN-03,RM,57194
+WH-08,Pune Work-in-Progress Store,PLT-IN-03,WIP,41962
+WH-09,Pune Finished Goods Store,PLT-IN-03,FG,36023

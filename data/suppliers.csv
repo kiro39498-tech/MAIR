@@ -1,0 +1,101 @@
+supplier_id,supplier_name,country,reliability_score,preferred_supplier,payment_terms
+SUP-001,"Rodriguez, Figueroa and Sanchez",Germany,95,N,Net 30
+SUP-002,Doyle Ltd,Germany,86,N,Net 45
+SUP-003,"Mcclain, Miller and Henderson",Germany,88,Y,Net 45
+SUP-004,Davis and Sons,China,76,Y,Net 45
+SUP-005,"Guzman, Hoffman and Baldwin",Vietnam,89,N,Net 30
+SUP-006,"Gardner, Robinson and Lawrence",Vietnam,91,Y,Net 30
+SUP-007,Blake and Sons,Germany,67,N,Net 45
+SUP-008,"Henderson, Ramirez and Lewis",Vietnam,99,Y,Net 45
+SUP-009,Garcia-James,South Korea,67,N,Net 60
+SUP-010,Abbott-Munoz,South Korea,87,N,Net 30
+SUP-011,Blair PLC,Germany,81,Y,Net 15
+SUP-012,Dudley Group,Poland,81,N,Net 45
+SUP-013,Arnold Ltd,United States,87,Y,Net 30
+SUP-014,"Mcclure, Ward and Lee",Italy,91,N,Net 30
+SUP-015,Williams and Sons,Mexico,67,N,Net 30
+SUP-016,Galloway-Wyatt,China,65,N,Net 30
+SUP-017,James Group,United States,89,N,Net 45
+SUP-018,"Flowers, Martin and Kelly",Germany,67,Y,Net 45
+SUP-019,"Adams, Zuniga and Wong",Germany,92,N,Net 30
+SUP-020,"Reid, Ferguson and Sanchez",United States,91,Y,Net 60
+SUP-021,Gray-Mayo,Brazil,71,N,Net 45
+SUP-022,"Watts, Robinson and Nguyen",Poland,79,N,Net 30
+SUP-023,Perez Inc,Italy,83,Y,Net 30
+SUP-024,Morales-Jones,India,73,N,Net 15
+SUP-025,"Walter, Edwards and Rios",Brazil,73,N,Net 45
+SUP-026,Wilkerson-Day,India,70,N,Net 30
+SUP-027,Baker and Sons,Brazil,83,N,Net 30
+SUP-028,"Hoffman, Baker and Richards",South Korea,84,N,Net 45
+SUP-029,"Ross, Robinson and Bright",Italy,99,N,Net 30
+SUP-030,"Snyder, Campos and Callahan",India,75,Y,Net 45
+SUP-031,Burton Ltd,Brazil,97,N,Net 30
+SUP-032,Carlson-Cruz,United States,78,N,Net 30
+SUP-033,"Ferrell, Rice and Maddox",Brazil,81,N,Net 45
+SUP-034,Frazier Inc,Vietnam,78,Y,Net 30
+SUP-035,"Dyer, Potter and Mack",China,67,N,Net 45
+SUP-036,Rodriguez-Graham,Vietnam,99,N,Net 30
+SUP-037,Smith-Bowen,South Korea,84,N,Net 15
+SUP-038,"Baker, Mason and White",India,81,N,Net 60
+SUP-039,Harrell LLC,Germany,81,N,Net 30
+SUP-040,"Romero, Gonzalez and Brooks",Italy,83,Y,Net 60
+SUP-041,Ryan PLC,Mexico,67,N,Net 45
+SUP-042,George Group,Italy,68,N,Net 30
+SUP-043,Rodriguez LLC,India,74,N,Net 45
+SUP-044,Allen-Allen,China,75,Y,Net 30
+SUP-045,"Arroyo, Miller and Tucker",Mexico,80,N,Net 15
+SUP-046,Spence PLC,India,87,N,Net 45
+SUP-047,Anderson Group,Italy,89,N,Net 45
+SUP-048,"Martin, Rose and Obrien",China,85,Y,Net 30
+SUP-049,Hickman Ltd,China,88,Y,Net 60
+SUP-050,"Harris, Collins and Carney",Mexico,60,N,Net 45
+SUP-051,"Brooks, Lam and Hayes",China,81,Y,Net 30
+SUP-052,Walker LLC,India,72,N,Net 30
+SUP-053,Chapman and Sons,Poland,64,N,Net 60
+SUP-054,"Robinson, Jones and Welch",Vietnam,79,N,Net 30
+SUP-055,Jones Inc,Italy,76,N,Net 30
+SUP-056,Jones-Young,Vietnam,85,N,Net 45
+SUP-057,"Washington, Ryan and Cummings",Vietnam,87,Y,Net 45
+SUP-058,"Johnston, Sanchez and Kennedy",Vietnam,99,N,Net 45
+SUP-059,Lee-Davis,Mexico,81,N,Net 30
+SUP-060,Gomez-Jenkins,India,87,N,Net 30
+SUP-061,"Brown, Valdez and Lucas",China,92,N,Net 45
+SUP-062,Powell LLC,India,76,N,Net 45
+SUP-063,Wright and Sons,Mexico,77,N,Net 30
+SUP-064,"West, Henderson and Ramirez",South Korea,84,N,Net 30
+SUP-065,Baxter Inc,Mexico,84,N,Net 60
+SUP-066,Morton-Chase,South Korea,79,N,Net 60
+SUP-067,Williams PLC,South Korea,72,Y,Net 30
+SUP-068,Novak and Sons,Italy,83,N,Net 30
+SUP-069,Russell Group,Poland,64,N,Net 30
+SUP-070,Hancock Inc,United States,54,Y,Net 30
+SUP-071,Gray Group,Brazil,98,Y,Net 30
+SUP-072,House-Glover,United States,81,N,Net 30
+SUP-073,Henderson-Bernard,Italy,93,N,Net 60
+SUP-074,"Stanley, Tucker and Lee",Brazil,81,N,Net 30
+SUP-075,Novak PLC,India,89,N,Net 30
+SUP-076,"Daniels, Adkins and Brown",India,77,Y,Net 30
+SUP-077,"Woods, Calhoun and Schmidt",Italy,92,N,Net 45
+SUP-078,Yu Inc,India,48,N,Net 45
+SUP-079,Jones Inc,Vietnam,70,N,Net 15
+SUP-080,"Hensley, Powell and David",India,89,N,Net 30
+SUP-081,"Sanchez, Wheeler and Harvey",Italy,80,Y,Net 15
+SUP-082,Sandoval-Cunningham,Vietnam,94,N,Net 60
+SUP-083,Donovan-Harris,Poland,99,Y,Net 45
+SUP-084,"Edwards, Baker and Anderson",Brazil,74,N,Net 30
+SUP-085,"Evans, Stewart and Walton",Italy,81,Y,Net 60
+SUP-086,Smith PLC,Brazil,83,Y,Net 30
+SUP-087,"Ferrell, Jones and Lewis",Poland,99,Y,Net 30
+SUP-088,Anderson-Bailey,Poland,85,Y,Net 60
+SUP-089,Suarez LLC,Brazil,49,Y,Net 30
+SUP-090,Moore-Bass,United States,82,N,Net 45
+SUP-091,"Turner, Riggs and Roman",Italy,72,N,Net 30
+SUP-092,"Smith, Montoya and Evans",South Korea,72,N,Net 30
+SUP-093,"Garcia, Humphrey and Baker",Italy,56,N,Net 45
+SUP-094,Newton and Sons,India,88,Y,Net 30
+SUP-095,Campbell-Clark,Poland,90,Y,Net 45
+SUP-096,Harris-Walters,Brazil,88,Y,Net 30
+SUP-097,Wagner-King,South Korea,99,Y,Net 30
+SUP-098,Davis Group,Brazil,77,N,Net 45
+SUP-099,Williams-Cook,South Korea,99,N,Net 60
+SUP-100,Walsh LLC,China,68,N,Net 45

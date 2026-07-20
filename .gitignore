@@ -1,0 +1,47 @@
+# Python virtual environments and caches
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node/Vite dependencies and builds
+node_modules/
+dist/
+dist-ssr/
+*.local
+build/
+
+# Local databases and SQLite temporary files
+*.db
+*.sqlite
+*.db-journal
+*.db-wal
+*.db-shm
+data/replenishment.db
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDEs, editors and system files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/

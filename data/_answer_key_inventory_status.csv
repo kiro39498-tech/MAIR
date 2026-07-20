@@ -1,0 +1,576 @@
+material_id,plant_id,expected_status,usable_qty_reference
+MAT-00001,PLT-DE-02,Safety Stock Warning,383.4
+MAT-00002,PLT-US-01,Safety Stock Warning,156.7
+MAT-00003,PLT-DE-02,Safety Stock Warning,214.8
+MAT-00003,PLT-US-01,Safety Stock Warning,113.8
+MAT-00004,PLT-US-01,Safety Stock Warning,380.3
+MAT-00005,PLT-DE-02,Safety Stock Warning,400.2
+MAT-00006,PLT-DE-02,Safety Stock Warning,56.4
+MAT-00007,PLT-US-01,Safety Stock Warning,329.0
+MAT-00008,PLT-IN-03,Safety Stock Warning,708.5
+MAT-00009,PLT-US-01,Safety Stock Warning,810.8
+MAT-00010,PLT-US-01,Safety Stock Warning,184.4
+MAT-00011,PLT-US-01,Safety Stock Warning,996.0
+MAT-00012,PLT-IN-03,Shortage,-4.4
+MAT-00013,PLT-DE-02,Safety Stock Warning,307.1
+MAT-00014,PLT-IN-03,Safety Stock Warning,425.7
+MAT-00015,PLT-DE-02,Healthy,708.9
+MAT-00016,PLT-DE-02,Safety Stock Warning,285.9
+MAT-00016,PLT-IN-03,Safety Stock Warning,155.8
+MAT-00017,PLT-IN-03,Safety Stock Warning,915.7
+MAT-00017,PLT-US-01,Safety Stock Warning,939.4
+MAT-00018,PLT-IN-03,Safety Stock Warning,198.1
+MAT-00019,PLT-IN-03,Safety Stock Warning,158.5
+MAT-00020,PLT-DE-02,Safety Stock Warning,1284.0
+MAT-00021,PLT-IN-03,Safety Stock Warning,340.5
+MAT-00021,PLT-DE-02,Safety Stock Warning,330.1
+MAT-00022,PLT-DE-02,Safety Stock Warning,72.9
+MAT-00023,PLT-IN-03,Near Reorder,1005.3
+MAT-00024,PLT-US-01,Safety Stock Warning,468.4
+MAT-00025,PLT-DE-02,Near Reorder,1451.2
+MAT-00026,PLT-US-01,Shortage,0.0
+MAT-00027,PLT-IN-03,Safety Stock Warning,200.3
+MAT-00028,PLT-IN-03,Safety Stock Warning,242.6
+MAT-00029,PLT-IN-03,Safety Stock Warning,670.6
+MAT-00030,PLT-IN-03,Safety Stock Warning,225.1
+MAT-00031,PLT-DE-02,Safety Stock Warning,116.6
+MAT-00032,PLT-DE-02,Safety Stock Warning,1348.0
+MAT-00033,PLT-US-01,Safety Stock Warning,396.5
+MAT-00034,PLT-DE-02,Near Reorder,337.2
+MAT-00035,PLT-US-01,Near Reorder,995.0
+MAT-00036,PLT-US-01,Safety Stock Warning,69.1
+MAT-00037,PLT-US-01,Safety Stock Warning,319.2
+MAT-00038,PLT-US-01,Safety Stock Warning,659.8
+MAT-00039,PLT-DE-02,Safety Stock Warning,138.9
+MAT-00040,PLT-IN-03,Near Reorder,44.7
+MAT-00041,PLT-IN-03,Safety Stock Warning,67.3
+MAT-00042,PLT-IN-03,Safety Stock Warning,617.5
+MAT-00043,PLT-DE-02,Safety Stock Warning,1302.3
+MAT-00044,PLT-DE-02,Safety Stock Warning,311.3
+MAT-00045,PLT-DE-02,Safety Stock Warning,422.2
+MAT-00046,PLT-DE-02,Safety Stock Warning,189.1
+MAT-00047,PLT-IN-03,Near Reorder,535.9
+MAT-00048,PLT-IN-03,Safety Stock Warning,792.1
+MAT-00049,PLT-US-01,Safety Stock Warning,387.2
+MAT-00050,PLT-US-01,Safety Stock Warning,420.5
+MAT-00051,PLT-US-01,Safety Stock Warning,654.4
+MAT-00052,PLT-DE-02,Safety Stock Warning,385.9
+MAT-00053,PLT-US-01,Safety Stock Warning,537.5
+MAT-00053,PLT-DE-02,Safety Stock Warning,578.6
+MAT-00054,PLT-IN-03,Safety Stock Warning,214.1
+MAT-00054,PLT-DE-02,Safety Stock Warning,143.9
+MAT-00055,PLT-DE-02,Safety Stock Warning,420.9
+MAT-00056,PLT-DE-02,Near Reorder,946.3
+MAT-00057,PLT-DE-02,Safety Stock Warning,604.0
+MAT-00058,PLT-DE-02,Near Reorder,294.0
+MAT-00059,PLT-IN-03,Safety Stock Warning,503.8
+MAT-00060,PLT-US-01,Near Reorder,549.6
+MAT-00061,PLT-DE-02,Near Reorder,176.4
+MAT-00061,PLT-US-01,Safety Stock Warning,135.7
+MAT-00062,PLT-DE-02,Safety Stock Warning,132.1
+MAT-00063,PLT-US-01,Shortage,-9.7
+MAT-00064,PLT-US-01,Safety Stock Warning,344.2
+MAT-00065,PLT-US-01,Near Reorder,973.1
+MAT-00066,PLT-DE-02,Excess,3743.1
+MAT-00067,PLT-IN-03,Excess,1227.6
+MAT-00068,PLT-IN-03,Safety Stock Warning,394.7
+MAT-00069,PLT-US-01,Near Reorder,1479.5
+MAT-00070,PLT-US-01,Safety Stock Warning,1200.6
+MAT-00071,PLT-DE-02,Safety Stock Warning,1177.5
+MAT-00071,PLT-US-01,Safety Stock Warning,899.3
+MAT-00072,PLT-US-01,Safety Stock Warning,444.2
+MAT-00072,PLT-IN-03,Near Reorder,1079.1
+MAT-00073,PLT-IN-03,Safety Stock Warning,1063.3
+MAT-00073,PLT-US-01,Shortage,-12.1
+MAT-00074,PLT-DE-02,Safety Stock Warning,486.4
+MAT-00075,PLT-IN-03,Near Reorder,204.7
+MAT-00076,PLT-IN-03,Safety Stock Warning,484.3
+MAT-00076,PLT-DE-02,Safety Stock Warning,495.5
+MAT-00077,PLT-DE-02,Safety Stock Warning,396.0
+MAT-00078,PLT-IN-03,Safety Stock Warning,756.7
+MAT-00078,PLT-US-01,Near Reorder,1493.4
+MAT-00079,PLT-US-01,Safety Stock Warning,128.0
+MAT-00080,PLT-US-01,Excess,1754.7
+MAT-00081,PLT-DE-02,Safety Stock Warning,310.5
+MAT-00081,PLT-US-01,Safety Stock Warning,984.9
+MAT-00082,PLT-DE-02,Safety Stock Warning,481.5
+MAT-00083,PLT-US-01,Safety Stock Warning,227.5
+MAT-00084,PLT-IN-03,Safety Stock Warning,365.4
+MAT-00085,PLT-IN-03,Healthy,1110.9
+MAT-00086,PLT-DE-02,Safety Stock Warning,634.9
+MAT-00087,PLT-IN-03,Safety Stock Warning,145.4
+MAT-00088,PLT-DE-02,Safety Stock Warning,443.5
+MAT-00089,PLT-IN-03,Safety Stock Warning,57.0
+MAT-00090,PLT-DE-02,Near Reorder,787.1
+MAT-00091,PLT-US-01,Safety Stock Warning,256.1
+MAT-00092,PLT-DE-02,Healthy,1118.0
+MAT-00092,PLT-IN-03,Safety Stock Warning,619.2
+MAT-00093,PLT-IN-03,Safety Stock Warning,2097.5
+MAT-00094,PLT-IN-03,Safety Stock Warning,139.4
+MAT-00095,PLT-US-01,Safety Stock Warning,455.7
+MAT-00096,PLT-US-01,Safety Stock Warning,1286.4
+MAT-00096,PLT-DE-02,Excess,2907.9
+MAT-00097,PLT-DE-02,Safety Stock Warning,777.6
+MAT-00098,PLT-IN-03,Safety Stock Warning,915.9
+MAT-00099,PLT-DE-02,Safety Stock Warning,409.7
+MAT-00100,PLT-US-01,Safety Stock Warning,108.8
+MAT-00101,PLT-IN-03,Near Reorder,312.9
+MAT-00102,PLT-DE-02,Safety Stock Warning,568.5
+MAT-00103,PLT-DE-02,Safety Stock Warning,101.4
+MAT-00104,PLT-IN-03,Safety Stock Warning,209.0
+MAT-00105,PLT-DE-02,Safety Stock Warning,1136.4
+MAT-00106,PLT-DE-02,Safety Stock Warning,1040.7
+MAT-00107,PLT-US-01,Safety Stock Warning,243.8
+MAT-00108,PLT-DE-02,Safety Stock Warning,779.1
+MAT-00108,PLT-US-01,Safety Stock Warning,440.1
+MAT-00109,PLT-IN-03,Safety Stock Warning,1335.0
+MAT-00110,PLT-IN-03,Safety Stock Warning,157.3
+MAT-00111,PLT-IN-03,Safety Stock Warning,440.7
+MAT-00111,PLT-DE-02,Safety Stock Warning,352.2
+MAT-00112,PLT-IN-03,Safety Stock Warning,413.5
+MAT-00112,PLT-US-01,Safety Stock Warning,397.5
+MAT-00113,PLT-IN-03,Safety Stock Warning,289.2
+MAT-00114,PLT-US-01,Safety Stock Warning,1013.4
+MAT-00115,PLT-DE-02,Healthy,828.3
+MAT-00116,PLT-US-01,Safety Stock Warning,620.4
+MAT-00117,PLT-DE-02,Safety Stock Warning,351.5
+MAT-00118,PLT-US-01,Safety Stock Warning,1008.6
+MAT-00119,PLT-IN-03,Safety Stock Warning,30.2
+MAT-00120,PLT-DE-02,Near Reorder,1810.3
+MAT-00121,PLT-US-01,Safety Stock Warning,487.2
+MAT-00122,PLT-IN-03,Safety Stock Warning,111.8
+MAT-00123,PLT-US-01,Safety Stock Warning,578.0
+MAT-00124,PLT-DE-02,Shortage,38.3
+MAT-00124,PLT-US-01,Safety Stock Warning,339.7
+MAT-00125,PLT-IN-03,Safety Stock Warning,160.0
+MAT-00126,PLT-DE-02,Safety Stock Warning,558.7
+MAT-00127,PLT-IN-03,Near Reorder,420.5
+MAT-00128,PLT-IN-03,Safety Stock Warning,994.5
+MAT-00129,PLT-US-01,Safety Stock Warning,585.1
+MAT-00130,PLT-IN-03,Safety Stock Warning,626.2
+MAT-00131,PLT-US-01,Safety Stock Warning,429.5
+MAT-00131,PLT-DE-02,Safety Stock Warning,710.8
+MAT-00132,PLT-IN-03,Near Reorder,1528.1
+MAT-00133,PLT-DE-02,Safety Stock Warning,142.0
+MAT-00134,PLT-US-01,Near Reorder,647.4
+MAT-00135,PLT-US-01,Safety Stock Warning,361.4
+MAT-00136,PLT-US-01,Safety Stock Warning,244.7
+MAT-00137,PLT-IN-03,Safety Stock Warning,256.7
+MAT-00138,PLT-IN-03,Safety Stock Warning,59.3
+MAT-00139,PLT-US-01,Healthy,1330.0
+MAT-00140,PLT-US-01,Safety Stock Warning,251.8
+MAT-00141,PLT-US-01,Safety Stock Warning,565.3
+MAT-00141,PLT-DE-02,Near Reorder,1106.5
+MAT-00142,PLT-US-01,Near Reorder,1056.1
+MAT-00143,PLT-US-01,Near Reorder,871.9
+MAT-00144,PLT-IN-03,Safety Stock Warning,175.3
+MAT-00145,PLT-DE-02,Safety Stock Warning,1634.1
+MAT-00145,PLT-IN-03,Shortage,25.6
+MAT-00146,PLT-DE-02,Safety Stock Warning,481.9
+MAT-00147,PLT-US-01,Safety Stock Warning,284.7
+MAT-00148,PLT-US-01,Shortage,18.3
+MAT-00149,PLT-IN-03,Safety Stock Warning,584.3
+MAT-00150,PLT-US-01,Near Reorder,348.2
+MAT-00151,PLT-US-01,Safety Stock Warning,822.9
+MAT-00152,PLT-US-01,Safety Stock Warning,556.8
+MAT-00153,PLT-IN-03,Healthy,651.5
+MAT-00154,PLT-US-01,Safety Stock Warning,75.3
+MAT-00155,PLT-IN-03,Safety Stock Warning,627.6
+MAT-00156,PLT-DE-02,Safety Stock Warning,148.8
+MAT-00157,PLT-IN-03,Near Reorder,1046.1
+MAT-00158,PLT-IN-03,Healthy,949.0
+MAT-00159,PLT-DE-02,Safety Stock Warning,1723.3
+MAT-00160,PLT-US-01,Excess,1895.8
+MAT-00161,PLT-IN-03,Near Reorder,413.9
+MAT-00162,PLT-IN-03,Safety Stock Warning,688.7
+MAT-00162,PLT-US-01,Safety Stock Warning,1045.6
+MAT-00163,PLT-US-01,Healthy,307.0
+MAT-00164,PLT-IN-03,Safety Stock Warning,1090.2
+MAT-00165,PLT-DE-02,Near Reorder,439.7
+MAT-00166,PLT-IN-03,Safety Stock Warning,843.8
+MAT-00167,PLT-US-01,Safety Stock Warning,102.1
+MAT-00168,PLT-IN-03,Safety Stock Warning,1516.9
+MAT-00169,PLT-IN-03,Shortage,-10.5
+MAT-00170,PLT-IN-03,Near Reorder,1030.5
+MAT-00171,PLT-US-01,Safety Stock Warning,471.3
+MAT-00172,PLT-DE-02,Safety Stock Warning,808.5
+MAT-00173,PLT-US-01,Near Reorder,797.1
+MAT-00174,PLT-IN-03,Near Reorder,891.8
+MAT-00175,PLT-DE-02,Near Reorder,866.2
+MAT-00175,PLT-IN-03,Near Reorder,907.2
+MAT-00176,PLT-US-01,Excess,1297.0
+MAT-00177,PLT-IN-03,Near Reorder,1782.3
+MAT-00178,PLT-IN-03,Safety Stock Warning,358.1
+MAT-00178,PLT-US-01,Safety Stock Warning,520.4
+MAT-00179,PLT-IN-03,Safety Stock Warning,69.8
+MAT-00180,PLT-DE-02,Safety Stock Warning,98.3
+MAT-00181,PLT-IN-03,Healthy,1880.4
+MAT-00182,PLT-US-01,Near Reorder,430.1
+MAT-00183,PLT-IN-03,Safety Stock Warning,927.0
+MAT-00184,PLT-IN-03,Near Reorder,610.1
+MAT-00185,PLT-IN-03,Safety Stock Warning,384.7
+MAT-00186,PLT-DE-02,Safety Stock Warning,616.4
+MAT-00186,PLT-IN-03,Safety Stock Warning,1341.2
+MAT-00187,PLT-DE-02,Safety Stock Warning,9.8
+MAT-00188,PLT-US-01,Safety Stock Warning,230.7
+MAT-00188,PLT-IN-03,Safety Stock Warning,486.6
+MAT-00189,PLT-US-01,Safety Stock Warning,187.7
+MAT-00190,PLT-US-01,Safety Stock Warning,925.3
+MAT-00191,PLT-IN-03,Safety Stock Warning,289.7
+MAT-00192,PLT-DE-02,Safety Stock Warning,255.2
+MAT-00192,PLT-US-01,Safety Stock Warning,314.9
+MAT-00193,PLT-IN-03,Safety Stock Warning,810.5
+MAT-00194,PLT-IN-03,Near Reorder,455.8
+MAT-00194,PLT-US-01,Safety Stock Warning,66.1
+MAT-00195,PLT-US-01,Safety Stock Warning,441.4
+MAT-00196,PLT-DE-02,Safety Stock Warning,896.5
+MAT-00197,PLT-IN-03,Safety Stock Warning,1346.9
+MAT-00198,PLT-US-01,Safety Stock Warning,150.7
+MAT-00199,PLT-DE-02,Excess,2470.6
+MAT-00200,PLT-US-01,Safety Stock Warning,140.1
+MAT-00201,PLT-US-01,Safety Stock Warning,510.5
+MAT-00201,PLT-IN-03,Safety Stock Warning,491.8
+MAT-00202,PLT-US-01,Safety Stock Warning,610.8
+MAT-00203,PLT-US-01,Near Reorder,691.7
+MAT-00204,PLT-IN-03,Safety Stock Warning,182.0
+MAT-00205,PLT-US-01,Safety Stock Warning,413.2
+MAT-00206,PLT-IN-03,Safety Stock Warning,679.4
+MAT-00207,PLT-DE-02,Shortage,42.9
+MAT-00208,PLT-IN-03,Safety Stock Warning,1184.2
+MAT-00209,PLT-US-01,Shortage,104.7
+MAT-00210,PLT-US-01,Safety Stock Warning,95.6
+MAT-00211,PLT-DE-02,Safety Stock Warning,410.4
+MAT-00212,PLT-DE-02,Safety Stock Warning,237.1
+MAT-00212,PLT-IN-03,Safety Stock Warning,288.5
+MAT-00213,PLT-US-01,Safety Stock Warning,274.0
+MAT-00213,PLT-DE-02,Safety Stock Warning,323.4
+MAT-00214,PLT-US-01,Safety Stock Warning,178.4
+MAT-00214,PLT-DE-02,Safety Stock Warning,21.3
+MAT-00215,PLT-IN-03,Safety Stock Warning,603.2
+MAT-00216,PLT-DE-02,Safety Stock Warning,388.0
+MAT-00217,PLT-IN-03,Safety Stock Warning,840.4
+MAT-00218,PLT-IN-03,Safety Stock Warning,544.6
+MAT-00218,PLT-US-01,Safety Stock Warning,828.5
+MAT-00219,PLT-IN-03,Near Reorder,862.6
+MAT-00220,PLT-US-01,Safety Stock Warning,209.5
+MAT-00221,PLT-IN-03,Safety Stock Warning,362.6
+MAT-00222,PLT-DE-02,Safety Stock Warning,76.3
+MAT-00223,PLT-IN-03,Safety Stock Warning,144.2
+MAT-00224,PLT-IN-03,Safety Stock Warning,455.4
+MAT-00225,PLT-IN-03,Safety Stock Warning,103.1
+MAT-00225,PLT-DE-02,Safety Stock Warning,499.9
+MAT-00226,PLT-US-01,Safety Stock Warning,462.5
+MAT-00227,PLT-US-01,Safety Stock Warning,1315.5
+MAT-00228,PLT-US-01,Safety Stock Warning,445.2
+MAT-00229,PLT-IN-03,Safety Stock Warning,1245.1
+MAT-00230,PLT-DE-02,Near Reorder,1313.8
+MAT-00231,PLT-US-01,Safety Stock Warning,111.8
+MAT-00232,PLT-DE-02,Safety Stock Warning,818.4
+MAT-00233,PLT-US-01,Safety Stock Warning,52.4
+MAT-00234,PLT-IN-03,Safety Stock Warning,1174.5
+MAT-00235,PLT-IN-03,Safety Stock Warning,787.2
+MAT-00235,PLT-US-01,Near Reorder,1219.9
+MAT-00236,PLT-IN-03,Safety Stock Warning,156.5
+MAT-00236,PLT-DE-02,Safety Stock Warning,171.9
+MAT-00237,PLT-US-01,Safety Stock Warning,696.4
+MAT-00238,PLT-IN-03,Safety Stock Warning,648.6
+MAT-00239,PLT-IN-03,Safety Stock Warning,796.5
+MAT-00240,PLT-DE-02,Safety Stock Warning,527.5
+MAT-00241,PLT-DE-02,Near Reorder,1218.4
+MAT-00242,PLT-US-01,Safety Stock Warning,529.1
+MAT-00243,PLT-IN-03,Safety Stock Warning,320.7
+MAT-00244,PLT-DE-02,Safety Stock Warning,528.5
+MAT-00245,PLT-IN-03,Safety Stock Warning,970.0
+MAT-00246,PLT-DE-02,Near Reorder,1604.6
+MAT-00247,PLT-US-01,Safety Stock Warning,316.5
+MAT-00248,PLT-DE-02,Safety Stock Warning,742.2
+MAT-00249,PLT-DE-02,Healthy,877.7
+MAT-00250,PLT-DE-02,Near Reorder,683.4
+MAT-00251,PLT-US-01,Excess,650.6
+MAT-00252,PLT-DE-02,Safety Stock Warning,58.6
+MAT-00253,PLT-US-01,Near Reorder,862.9
+MAT-00254,PLT-IN-03,Safety Stock Warning,445.7
+MAT-00255,PLT-US-01,Near Reorder,560.0
+MAT-00256,PLT-DE-02,Safety Stock Warning,675.5
+MAT-00257,PLT-DE-02,Safety Stock Warning,707.4
+MAT-00258,PLT-US-01,Safety Stock Warning,441.2
+MAT-00259,PLT-DE-02,Safety Stock Warning,155.0
+MAT-00260,PLT-DE-02,Healthy,1293.5
+MAT-00261,PLT-IN-03,Safety Stock Warning,1143.9
+MAT-00262,PLT-IN-03,Near Reorder,326.5
+MAT-00263,PLT-DE-02,Safety Stock Warning,418.8
+MAT-00263,PLT-IN-03,Safety Stock Warning,757.2
+MAT-00264,PLT-US-01,Near Reorder,55.7
+MAT-00265,PLT-DE-02,Safety Stock Warning,568.2
+MAT-00266,PLT-US-01,Safety Stock Warning,598.4
+MAT-00267,PLT-US-01,Near Reorder,292.7
+MAT-00268,PLT-US-01,Safety Stock Warning,236.9
+MAT-00269,PLT-US-01,Safety Stock Warning,454.3
+MAT-00270,PLT-DE-02,Safety Stock Warning,790.7
+MAT-00271,PLT-US-01,Safety Stock Warning,771.5
+MAT-00272,PLT-US-01,Safety Stock Warning,378.4
+MAT-00273,PLT-US-01,Shortage,-2.0
+MAT-00274,PLT-IN-03,Safety Stock Warning,43.0
+MAT-00275,PLT-DE-02,Near Reorder,535.0
+MAT-00276,PLT-US-01,Shortage,-25.4
+MAT-00277,PLT-DE-02,Safety Stock Warning,181.3
+MAT-00278,PLT-DE-02,Safety Stock Warning,116.4
+MAT-00278,PLT-US-01,Safety Stock Warning,101.6
+MAT-00279,PLT-DE-02,Safety Stock Warning,496.9
+MAT-00280,PLT-DE-02,Safety Stock Warning,272.8
+MAT-00281,PLT-IN-03,Safety Stock Warning,591.4
+MAT-00282,PLT-DE-02,Safety Stock Warning,1198.7
+MAT-00282,PLT-IN-03,Safety Stock Warning,648.5
+MAT-00283,PLT-IN-03,Healthy,957.1
+MAT-00284,PLT-DE-02,Safety Stock Warning,841.6
+MAT-00284,PLT-IN-03,Safety Stock Warning,1128.5
+MAT-00285,PLT-IN-03,Safety Stock Warning,344.3
+MAT-00285,PLT-DE-02,Safety Stock Warning,295.6
+MAT-00286,PLT-IN-03,Safety Stock Warning,1257.4
+MAT-00287,PLT-DE-02,Near Reorder,1466.0
+MAT-00288,PLT-DE-02,Near Reorder,865.6
+MAT-00289,PLT-IN-03,Safety Stock Warning,150.1
+MAT-00290,PLT-IN-03,Safety Stock Warning,1033.0
+MAT-00291,PLT-US-01,Safety Stock Warning,552.5
+MAT-00292,PLT-US-01,Safety Stock Warning,224.7
+MAT-00293,PLT-US-01,Safety Stock Warning,383.1
+MAT-00294,PLT-IN-03,Safety Stock Warning,812.7
+MAT-00295,PLT-IN-03,Safety Stock Warning,21.4
+MAT-00296,PLT-US-01,Safety Stock Warning,171.0
+MAT-00296,PLT-IN-03,Safety Stock Warning,169.1
+MAT-00297,PLT-US-01,Safety Stock Warning,256.5
+MAT-00298,PLT-DE-02,Safety Stock Warning,285.1
+MAT-00298,PLT-US-01,Safety Stock Warning,356.2
+MAT-00299,PLT-US-01,Safety Stock Warning,237.7
+MAT-00299,PLT-DE-02,Safety Stock Warning,261.4
+MAT-00300,PLT-DE-02,Safety Stock Warning,347.0
+MAT-00301,PLT-US-01,Safety Stock Warning,609.8
+MAT-00302,PLT-US-01,Near Reorder,80.6
+MAT-00303,PLT-US-01,Safety Stock Warning,443.1
+MAT-00304,PLT-IN-03,Safety Stock Warning,709.7
+MAT-00305,PLT-DE-02,Safety Stock Warning,1177.2
+MAT-00306,PLT-US-01,Safety Stock Warning,371.6
+MAT-00307,PLT-IN-03,Safety Stock Warning,547.5
+MAT-00307,PLT-US-01,Safety Stock Warning,720.9
+MAT-00308,PLT-IN-03,Shortage,6.0
+MAT-00309,PLT-IN-03,Safety Stock Warning,1188.9
+MAT-00310,PLT-US-01,Safety Stock Warning,335.5
+MAT-00310,PLT-IN-03,Safety Stock Warning,1045.0
+MAT-00311,PLT-IN-03,Safety Stock Warning,819.5
+MAT-00311,PLT-US-01,Safety Stock Warning,707.8
+MAT-00312,PLT-DE-02,Safety Stock Warning,529.0
+MAT-00313,PLT-IN-03,Safety Stock Warning,326.6
+MAT-00313,PLT-US-01,Safety Stock Warning,359.1
+MAT-00314,PLT-US-01,Near Reorder,960.8
+MAT-00315,PLT-DE-02,Excess,2288.7
+MAT-00316,PLT-DE-02,Safety Stock Warning,613.5
+MAT-00317,PLT-US-01,Safety Stock Warning,477.1
+MAT-00318,PLT-US-01,Safety Stock Warning,917.9
+MAT-00319,PLT-IN-03,Safety Stock Warning,709.5
+MAT-00320,PLT-DE-02,Healthy,1268.4
+MAT-00321,PLT-US-01,Near Reorder,674.6
+MAT-00321,PLT-IN-03,Near Reorder,807.4
+MAT-00322,PLT-DE-02,Safety Stock Warning,218.6
+MAT-00323,PLT-IN-03,Safety Stock Warning,1166.7
+MAT-00323,PLT-DE-02,Safety Stock Warning,410.4
+MAT-00324,PLT-DE-02,Safety Stock Warning,417.9
+MAT-00325,PLT-US-01,Safety Stock Warning,540.9
+MAT-00326,PLT-US-01,Safety Stock Warning,773.0
+MAT-00326,PLT-IN-03,Safety Stock Warning,533.1
+MAT-00327,PLT-DE-02,Near Reorder,202.6
+MAT-00328,PLT-US-01,Safety Stock Warning,910.5
+MAT-00329,PLT-IN-03,Safety Stock Warning,79.1
+MAT-00330,PLT-US-01,Safety Stock Warning,57.8
+MAT-00331,PLT-US-01,Excess,190.4
+MAT-00332,PLT-US-01,Near Reorder,168.6
+MAT-00333,PLT-DE-02,Safety Stock Warning,97.7
+MAT-00334,PLT-IN-03,Near Reorder,1268.0
+MAT-00335,PLT-DE-02,Safety Stock Warning,62.3
+MAT-00336,PLT-US-01,Safety Stock Warning,1119.4
+MAT-00337,PLT-DE-02,Safety Stock Warning,575.4
+MAT-00338,PLT-US-01,Excess,3318.2
+MAT-00339,PLT-IN-03,Safety Stock Warning,331.4
+MAT-00340,PLT-US-01,Safety Stock Warning,545.9
+MAT-00341,PLT-IN-03,Safety Stock Warning,102.7
+MAT-00341,PLT-DE-02,Safety Stock Warning,28.2
+MAT-00342,PLT-IN-03,Near Reorder,908.1
+MAT-00343,PLT-US-01,Near Reorder,970.3
+MAT-00344,PLT-IN-03,Near Reorder,66.7
+MAT-00344,PLT-DE-02,Safety Stock Warning,47.4
+MAT-00345,PLT-DE-02,Near Reorder,544.7
+MAT-00346,PLT-IN-03,Shortage,56.1
+MAT-00347,PLT-US-01,Safety Stock Warning,713.3
+MAT-00348,PLT-IN-03,Near Reorder,1258.7
+MAT-00349,PLT-US-01,Safety Stock Warning,557.6
+MAT-00350,PLT-IN-03,Safety Stock Warning,60.0
+MAT-00351,PLT-IN-03,Safety Stock Warning,72.3
+MAT-00352,PLT-US-01,Safety Stock Warning,934.3
+MAT-00353,PLT-IN-03,Healthy,1058.1
+MAT-00354,PLT-IN-03,Near Reorder,186.5
+MAT-00355,PLT-IN-03,Safety Stock Warning,116.9
+MAT-00356,PLT-DE-02,Near Reorder,929.6
+MAT-00357,PLT-IN-03,Safety Stock Warning,803.8
+MAT-00358,PLT-DE-02,Safety Stock Warning,548.8
+MAT-00359,PLT-IN-03,Safety Stock Warning,314.4
+MAT-00360,PLT-DE-02,Safety Stock Warning,164.8
+MAT-00361,PLT-US-01,Near Reorder,1179.1
+MAT-00362,PLT-DE-02,Safety Stock Warning,886.8
+MAT-00363,PLT-IN-03,Safety Stock Warning,563.2
+MAT-00364,PLT-DE-02,Safety Stock Warning,387.4
+MAT-00365,PLT-US-01,Safety Stock Warning,734.0
+MAT-00366,PLT-DE-02,Shortage,-45.1
+MAT-00367,PLT-US-01,Safety Stock Warning,13.2
+MAT-00367,PLT-IN-03,Near Reorder,49.5
+MAT-00368,PLT-DE-02,Safety Stock Warning,275.0
+MAT-00369,PLT-DE-02,Shortage,123.3
+MAT-00370,PLT-IN-03,Near Reorder,1000.7
+MAT-00370,PLT-DE-02,Near Reorder,968.4
+MAT-00371,PLT-US-01,Excess,3410.5
+MAT-00371,PLT-IN-03,Safety Stock Warning,1158.1
+MAT-00372,PLT-DE-02,Safety Stock Warning,20.8
+MAT-00372,PLT-US-01,Safety Stock Warning,144.5
+MAT-00373,PLT-DE-02,Near Reorder,1249.3
+MAT-00374,PLT-US-01,Near Reorder,1415.0
+MAT-00375,PLT-IN-03,Safety Stock Warning,38.1
+MAT-00376,PLT-IN-03,Safety Stock Warning,1179.2
+MAT-00377,PLT-DE-02,Safety Stock Warning,804.7
+MAT-00378,PLT-IN-03,Near Reorder,1341.0
+MAT-00379,PLT-IN-03,Near Reorder,685.9
+MAT-00380,PLT-IN-03,Safety Stock Warning,112.8
+MAT-00381,PLT-IN-03,Safety Stock Warning,140.3
+MAT-00382,PLT-US-01,Safety Stock Warning,1527.7
+MAT-00383,PLT-US-01,Safety Stock Warning,458.9
+MAT-00383,PLT-DE-02,Shortage,-33.2
+MAT-00384,PLT-IN-03,Safety Stock Warning,1119.6
+MAT-00385,PLT-DE-02,Near Reorder,722.6
+MAT-00386,PLT-IN-03,Safety Stock Warning,944.0
+MAT-00387,PLT-US-01,Near Reorder,743.6
+MAT-00388,PLT-US-01,Safety Stock Warning,684.1
+MAT-00389,PLT-US-01,Safety Stock Warning,921.9
+MAT-00389,PLT-IN-03,Safety Stock Warning,520.9
+MAT-00390,PLT-US-01,Safety Stock Warning,740.7
+MAT-00391,PLT-DE-02,Near Reorder,1653.7
+MAT-00392,PLT-DE-02,Safety Stock Warning,815.2
+MAT-00393,PLT-DE-02,Safety Stock Warning,407.6
+MAT-00394,PLT-IN-03,Safety Stock Warning,576.1
+MAT-00395,PLT-IN-03,Safety Stock Warning,838.6
+MAT-00396,PLT-US-01,Safety Stock Warning,830.3
+MAT-00397,PLT-IN-03,Safety Stock Warning,883.2
+MAT-00398,PLT-DE-02,Safety Stock Warning,54.4
+MAT-00399,PLT-US-01,Safety Stock Warning,102.6
+MAT-00400,PLT-DE-02,Safety Stock Warning,246.9
+MAT-00401,PLT-DE-02,Healthy,128.1
+MAT-00402,PLT-US-01,Safety Stock Warning,1026.0
+MAT-00403,PLT-DE-02,Safety Stock Warning,723.4
+MAT-00404,PLT-IN-03,Safety Stock Warning,424.2
+MAT-00404,PLT-DE-02,Safety Stock Warning,217.8
+MAT-00405,PLT-IN-03,Near Reorder,401.7
+MAT-00406,PLT-IN-03,Safety Stock Warning,733.4
+MAT-00407,PLT-US-01,Safety Stock Warning,143.2
+MAT-00408,PLT-DE-02,Safety Stock Warning,752.9
+MAT-00409,PLT-DE-02,Safety Stock Warning,907.0
+MAT-00410,PLT-IN-03,Safety Stock Warning,648.6
+MAT-00411,PLT-DE-02,Safety Stock Warning,518.8
+MAT-00412,PLT-IN-03,Safety Stock Warning,68.4
+MAT-00413,PLT-DE-02,Safety Stock Warning,1338.6
+MAT-00414,PLT-IN-03,Near Reorder,796.6
+MAT-00414,PLT-US-01,Shortage,-44.5
+MAT-00415,PLT-IN-03,Safety Stock Warning,360.9
+MAT-00416,PLT-DE-02,Safety Stock Warning,940.0
+MAT-00417,PLT-DE-02,Safety Stock Warning,2349.6
+MAT-00418,PLT-IN-03,Near Reorder,550.9
+MAT-00419,PLT-DE-02,Safety Stock Warning,457.8
+MAT-00420,PLT-DE-02,Safety Stock Warning,1406.7
+MAT-00420,PLT-IN-03,Safety Stock Warning,605.2
+MAT-00421,PLT-DE-02,Excess,529.8
+MAT-00422,PLT-DE-02,Safety Stock Warning,1202.2
+MAT-00423,PLT-US-01,Near Reorder,476.2
+MAT-00424,PLT-IN-03,Safety Stock Warning,441.9
+MAT-00425,PLT-DE-02,Safety Stock Warning,663.6
+MAT-00425,PLT-IN-03,Safety Stock Warning,800.0
+MAT-00426,PLT-DE-02,Safety Stock Warning,225.9
+MAT-00427,PLT-IN-03,Near Reorder,349.3
+MAT-00428,PLT-IN-03,Near Reorder,698.1
+MAT-00429,PLT-DE-02,Safety Stock Warning,216.3
+MAT-00429,PLT-IN-03,Safety Stock Warning,44.7
+MAT-00430,PLT-US-01,Excess,729.6
+MAT-00431,PLT-IN-03,Excess,2041.1
+MAT-00432,PLT-DE-02,Safety Stock Warning,56.9
+MAT-00432,PLT-IN-03,Shortage,-4.2
+MAT-00433,PLT-US-01,Safety Stock Warning,1503.1
+MAT-00434,PLT-DE-02,Safety Stock Warning,368.4
+MAT-00435,PLT-DE-02,Near Reorder,688.4
+MAT-00436,PLT-US-01,Safety Stock Warning,763.3
+MAT-00437,PLT-US-01,Healthy,1142.1
+MAT-00438,PLT-IN-03,Safety Stock Warning,188.0
+MAT-00439,PLT-US-01,Excess,1419.1
+MAT-00439,PLT-IN-03,Near Reorder,1127.2
+MAT-00440,PLT-DE-02,Healthy,1844.9
+MAT-00441,PLT-US-01,Safety Stock Warning,384.3
+MAT-00442,PLT-DE-02,Safety Stock Warning,1319.1
+MAT-00443,PLT-DE-02,Safety Stock Warning,873.7
+MAT-00444,PLT-IN-03,Healthy,963.4
+MAT-00445,PLT-US-01,Safety Stock Warning,295.7
+MAT-00446,PLT-IN-03,Near Reorder,1108.4
+MAT-00447,PLT-DE-02,Excess,339.3
+MAT-00448,PLT-IN-03,Shortage,88.9
+MAT-00449,PLT-IN-03,Healthy,611.4
+MAT-00449,PLT-US-01,Near Reorder,378.9
+MAT-00450,PLT-US-01,Safety Stock Warning,71.9
+MAT-00451,PLT-IN-03,Near Reorder,538.7
+MAT-00452,PLT-US-01,Near Reorder,1366.5
+MAT-00453,PLT-DE-02,Safety Stock Warning,260.9
+MAT-00454,PLT-IN-03,Safety Stock Warning,640.0
+MAT-00455,PLT-US-01,Healthy,920.0
+MAT-00456,PLT-DE-02,Safety Stock Warning,194.9
+MAT-00457,PLT-IN-03,Safety Stock Warning,1898.6
+MAT-00457,PLT-DE-02,Safety Stock Warning,1259.2
+MAT-00458,PLT-US-01,Safety Stock Warning,602.3
+MAT-00458,PLT-IN-03,Safety Stock Warning,435.0
+MAT-00459,PLT-IN-03,Safety Stock Warning,167.5
+MAT-00460,PLT-DE-02,Safety Stock Warning,1406.9
+MAT-00460,PLT-US-01,Safety Stock Warning,1226.5
+MAT-00461,PLT-US-01,Safety Stock Warning,1077.6
+MAT-00462,PLT-IN-03,Near Reorder,244.5
+MAT-00463,PLT-US-01,Safety Stock Warning,735.2
+MAT-00464,PLT-IN-03,Near Reorder,298.4
+MAT-00465,PLT-IN-03,Safety Stock Warning,234.7
+MAT-00465,PLT-DE-02,Safety Stock Warning,215.9
+MAT-00466,PLT-US-01,Safety Stock Warning,20.8
+MAT-00467,PLT-IN-03,Safety Stock Warning,264.9
+MAT-00468,PLT-IN-03,Safety Stock Warning,1267.4
+MAT-00469,PLT-IN-03,Safety Stock Warning,63.5
+MAT-00470,PLT-IN-03,Safety Stock Warning,57.8
+MAT-00471,PLT-IN-03,Safety Stock Warning,1383.0
+MAT-00472,PLT-IN-03,Near Reorder,572.3
+MAT-00473,PLT-IN-03,Safety Stock Warning,103.3
+MAT-00474,PLT-IN-03,Safety Stock Warning,61.5
+MAT-00475,PLT-DE-02,Near Reorder,772.7
+MAT-00476,PLT-DE-02,Safety Stock Warning,612.8
+MAT-00477,PLT-US-01,Safety Stock Warning,41.5
+MAT-00478,PLT-DE-02,Shortage,-18.4
+MAT-00478,PLT-US-01,Safety Stock Warning,169.6
+MAT-00479,PLT-US-01,Safety Stock Warning,939.4
+MAT-00480,PLT-IN-03,Safety Stock Warning,316.5
+MAT-00481,PLT-DE-02,Safety Stock Warning,945.2
+MAT-00482,PLT-IN-03,Safety Stock Warning,818.6
+MAT-00482,PLT-US-01,Safety Stock Warning,717.2
+MAT-00483,PLT-IN-03,Near Reorder,135.7
+MAT-00484,PLT-IN-03,Safety Stock Warning,221.7
+MAT-00485,PLT-IN-03,Shortage,-11.9
+MAT-00486,PLT-IN-03,Safety Stock Warning,1024.4
+MAT-00487,PLT-IN-03,Safety Stock Warning,514.4
+MAT-00488,PLT-US-01,Safety Stock Warning,466.1
+MAT-00489,PLT-DE-02,Safety Stock Warning,1228.1
+MAT-00490,PLT-DE-02,Safety Stock Warning,90.2
+MAT-00491,PLT-IN-03,Safety Stock Warning,660.1
+MAT-00491,PLT-DE-02,Safety Stock Warning,1682.3
+MAT-00492,PLT-US-01,Near Reorder,308.5
+MAT-00493,PLT-DE-02,Safety Stock Warning,371.3
+MAT-00494,PLT-US-01,Safety Stock Warning,488.6
+MAT-00495,PLT-DE-02,Safety Stock Warning,112.7
+MAT-00496,PLT-US-01,Shortage,5.3
+MAT-00497,PLT-IN-03,Safety Stock Warning,219.1
+MAT-00498,PLT-IN-03,Safety Stock Warning,80.5
+MAT-00499,PLT-US-01,Safety Stock Warning,1287.5
+MAT-00500,PLT-DE-02,Safety Stock Warning,103.5

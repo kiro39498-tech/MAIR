@@ -1,0 +1,501 @@
+material_id,material_name,material_type,unit_of_measure,standard_cost,criticality,abc_class
+MAT-00001,Zinc-Coated Housing-S,Component,EA,1.9,Medium,C
+MAT-00002,Cast Iron Housing,Raw Material,EA,28.41,Medium,B
+MAT-00003,Carbon Steel Wiring Harness,Raw Material,EA,5.72,Low,B
+MAT-00004,Cast Iron Chain Link,Raw Material,EA,1.94,Low,C
+MAT-00005,Cast Iron O-Ring,Component,KG,3.33,High,B
+MAT-00006,Nylon Bolt Set 55mm,Fastener,SET,3.67,Medium,C
+MAT-00007,Stainless Steel Gasket-S,Component,EA,7.3,High,C
+MAT-00008,Copper Diaphragm-L,Component,EA,12.57,Low,C
+MAT-00009,Carbon Steel O-Ring,Raw Material,EA,21.51,Medium,B
+MAT-00010,Rubber Bearing-XL,Raw Material,KG,14.51,Medium,C
+MAT-00011,Stainless Steel Sensor 60mm,Fastener,M,22.08,Low,C
+MAT-00012,Galvanized Steel Connector 5mm,Electronic,L,2.33,Medium,B
+MAT-00013,Aluminum Relay-XL,Electronic,EA,23.09,Medium,C
+MAT-00014,PVC Filter Cartridge 21mm,Component,KG,64.55,Low,B
+MAT-00015,Stainless Steel Bracket,Raw Material,EA,23.43,Medium,C
+MAT-00016,Ceramic Relay 25mm,Fastener,EA,25.9,Low,C
+MAT-00017,Carbon Steel Cable Gland-S,Component,EA,3.13,High,C
+MAT-00018,Stainless Steel Terminal Block 33mm,Electronic,EA,26.44,High,C
+MAT-00019,Stainless Steel Seal-L,Fastener,EA,3.18,Medium,C
+MAT-00020,Carbon Steel Stator Core-M,Component,EA,4.68,Medium,C
+MAT-00021,Carbon Steel Pulley,Electronic,EA,14.8,Medium,B
+MAT-00022,Carbon Steel Stator Core 27mm,Raw Material,KG,63.87,High,A
+MAT-00023,Zinc-Coated Spring-XL,Raw Material,EA,10.82,High,C
+MAT-00024,Zinc-Coated Filter Cartridge 25mm,Raw Material,EA,3.52,Low,B
+MAT-00025,Galvanized Steel Gasket,Component,M,5.98,Low,A
+MAT-00026,Chrome-Plated Circuit Board,Component,EA,2.18,Low,B
+MAT-00027,Rubber Cable Gland-L,Component,EA,6.25,Medium,C
+MAT-00028,PVC Coupling,Packaging,KG,6.36,Medium,B
+MAT-00029,Galvanized Steel Sprocket,Raw Material,EA,19.47,Medium,C
+MAT-00030,Bronze Diaphragm,Electronic,EA,17.46,High,C
+MAT-00031,Stainless Steel Rotor-S,Fastener,M,32.78,Low,C
+MAT-00032,Stainless Steel Impeller-L,Fastener,EA,16.19,Low,C
+MAT-00033,Galvanized Steel Filter Cartridge-XL,Component,EA,1.65,Low,B
+MAT-00034,Rubber Sprocket,Component,KG,30.83,Medium,C
+MAT-00035,Nylon Bracket,Component,EA,70.63,Low,A
+MAT-00036,Stainless Steel Housing 27mm,Component,EA,57.79,Low,C
+MAT-00037,Aluminum Bolt Set,Component,M,19.11,Medium,A
+MAT-00038,PVC Relay-S,Fastener,KG,6.42,Medium,C
+MAT-00039,Bronze Gasket-S,Raw Material,L,6.19,Low,C
+MAT-00040,Zinc-Coated Sprocket-L,Component,KG,11.87,Low,C
+MAT-00041,Rubber Terminal Block 20mm,Raw Material,KG,5.38,High,C
+MAT-00042,Chrome-Plated Impeller-L,Fastener,M,11.65,Medium,A
+MAT-00043,Chrome-Plated Terminal Block-L,Raw Material,EA,1.58,Medium,C
+MAT-00044,Brass Chain Link-S,Component,KG,5.67,Medium,C
+MAT-00045,Galvanized Steel Connector,Raw Material,SET,11.55,High,C
+MAT-00046,Brass Stator Core,Raw Material,EA,9.15,Low,C
+MAT-00047,Aluminum Spring 60mm,Fastener,M,100.36,Medium,B
+MAT-00048,Rubber Coupling 61mm,Raw Material,EA,3.71,Medium,C
+MAT-00049,Stainless Steel Bolt Set,Component,EA,2.11,Low,C
+MAT-00050,Chrome-Plated Gasket,Component,SET,67.67,Medium,C
+MAT-00051,PVC Nozzle,Electronic,EA,1.56,High,C
+MAT-00052,Stainless Steel Gasket-M,Component,M,4.67,Low,C
+MAT-00053,Stainless Steel Cable Gland,Fastener,KG,19.74,Medium,B
+MAT-00054,Nylon Housing 29mm,Component,M,2.62,Medium,C
+MAT-00055,Galvanized Steel Gasket-S,Raw Material,M,46.43,Medium,A
+MAT-00056,Galvanized Steel Shaft 41mm,Component,KG,23.7,High,C
+MAT-00057,PVC O-Ring 33mm,Electronic,L,1.39,Medium,C
+MAT-00058,Bronze Shaft-XL,Raw Material,EA,8.49,High,B
+MAT-00059,Copper Spring,Electronic,EA,3.05,High,A
+MAT-00060,Bronze Circuit Board 45mm,Raw Material,EA,15.71,Medium,B
+MAT-00061,Carbon Steel Connector,Raw Material,EA,10.33,High,B
+MAT-00062,Stainless Steel Sprocket,Component,SET,79.11,Medium,C
+MAT-00063,Zinc-Coated Sprocket 31mm,Component,KG,17.02,Medium,C
+MAT-00064,Chrome-Plated Circuit Board-L,Raw Material,EA,12.71,Medium,A
+MAT-00065,PVC Connector,Raw Material,EA,39.54,Medium,C
+MAT-00066,Copper Shaft,Component,EA,2.14,Medium,C
+MAT-00067,Carbon Steel Pulley,Raw Material,L,7.19,Low,A
+MAT-00068,Zinc-Coated Rotor-S,Raw Material,EA,0.74,Low,C
+MAT-00069,Copper Shaft-XL,Electronic,EA,15.66,Low,C
+MAT-00070,Nylon Sprocket,Raw Material,EA,3.08,Medium,C
+MAT-00071,Stainless Steel Terminal Block 50mm,Packaging,EA,20.92,Medium,C
+MAT-00072,Copper Circuit Board-S,Component,EA,9.13,Low,A
+MAT-00073,Bronze Bolt Set-S,Component,KG,7.14,Low,C
+MAT-00074,Carbon Steel Seal 78mm,Raw Material,EA,10.76,Low,C
+MAT-00075,Chrome-Plated Coupling,Raw Material,EA,13.93,Low,C
+MAT-00076,Brass Stator Core 45mm,Electronic,EA,5.68,Medium,C
+MAT-00077,Copper Impeller-L,Component,EA,19.21,High,B
+MAT-00078,Cast Iron Relay-M,Component,EA,0.69,High,C
+MAT-00079,Chrome-Plated Impeller,Raw Material,EA,22.5,High,C
+MAT-00080,Rubber Gasket 77mm,Electronic,EA,3.52,Low,A
+MAT-00081,Nylon Flange,Component,EA,39.0,Low,C
+MAT-00082,Brass Sensor 77mm,Raw Material,EA,81.39,Medium,C
+MAT-00083,Rubber Bushing,Raw Material,KG,3.44,Low,C
+MAT-00084,Bronze Coupling,Component,KG,11.3,Low,C
+MAT-00085,Cast Iron Impeller,Raw Material,EA,5.36,Medium,B
+MAT-00086,Bronze Flange,Raw Material,M,25.71,Medium,A
+MAT-00087,Brass Stator Core 78mm,Component,EA,10.78,High,C
+MAT-00088,Copper Rotor 28mm,Raw Material,EA,21.18,Low,B
+MAT-00089,Rubber Chain Link,Fastener,EA,3.75,Low,C
+MAT-00090,Stainless Steel Bushing-L,Raw Material,EA,7.53,Medium,B
+MAT-00091,Nylon Relay 21mm,Packaging,EA,1.67,Medium,C
+MAT-00092,Brass Impeller-S,Fastener,EA,195.51,Medium,C
+MAT-00093,Galvanized Steel Impeller 58mm,Electronic,EA,1.51,High,C
+MAT-00094,Nylon Nozzle,Component,KG,13.13,Low,C
+MAT-00095,Nylon Seal,Raw Material,EA,4.65,Medium,C
+MAT-00096,Bronze Relay,Component,M,6.8,Low,B
+MAT-00097,Rubber Shaft-L,Raw Material,KG,35.57,Medium,B
+MAT-00098,Brass Sprocket 27mm,Component,SET,0.83,Medium,B
+MAT-00099,Carbon Steel Relay 17mm,Component,EA,10.89,Low,C
+MAT-00100,Chrome-Plated Shaft 40mm,Electronic,EA,7.37,Medium,B
+MAT-00101,Stainless Steel Gasket 28mm,Packaging,EA,5.66,Medium,C
+MAT-00102,Carbon Steel Terminal Block 56mm,Electronic,EA,4.43,Medium,C
+MAT-00103,Carbon Steel Chain Link,Raw Material,KG,4.61,Medium,B
+MAT-00104,Stainless Steel Pulley-XL,Fastener,EA,1.92,Low,A
+MAT-00105,Nylon Impeller-L,Component,EA,150.82,Medium,C
+MAT-00106,Bronze Bolt Set,Component,KG,8.12,Medium,C
+MAT-00107,Aluminum Bearing 47mm,Raw Material,EA,26.69,Low,C
+MAT-00108,PVC Diaphragm 50mm,Fastener,M,4.69,Medium,C
+MAT-00109,Bronze Nozzle,Electronic,KG,6.61,Low,A
+MAT-00110,Cast Iron Connector,Component,EA,10.32,High,C
+MAT-00111,Aluminum Spring-M,Fastener,EA,9.31,Medium,C
+MAT-00112,Stainless Steel Seal-XL,Component,EA,9.33,Low,C
+MAT-00113,Rubber Diaphragm,Component,KG,10.59,Medium,C
+MAT-00114,Carbon Steel Diaphragm 45mm,Raw Material,EA,59.44,Medium,C
+MAT-00115,Ceramic Housing,Packaging,EA,113.16,Low,C
+MAT-00116,Rubber Valve Body-L,Component,KG,6.05,High,C
+MAT-00117,Nylon Valve Body 71mm,Component,EA,6.89,High,C
+MAT-00118,Bronze Filter Cartridge 46mm,Fastener,M,3.42,Medium,C
+MAT-00119,Carbon Steel Stator Core-XL,Component,M,17.81,High,A
+MAT-00120,PVC Sprocket 44mm,Packaging,EA,5.19,High,C
+MAT-00121,Stainless Steel Bolt Set,Raw Material,EA,21.66,High,C
+MAT-00122,Copper Bushing 76mm,Electronic,EA,28.6,Medium,B
+MAT-00123,Chrome-Plated Bolt Set 70mm,Electronic,M,18.62,High,B
+MAT-00124,Copper Coupling 8mm,Component,SET,82.37,High,C
+MAT-00125,Chrome-Plated Connector 43mm,Component,M,38.72,Medium,B
+MAT-00126,Copper Rotor,Raw Material,EA,2.6,Medium,B
+MAT-00127,Bronze Wiring Harness 66mm,Raw Material,M,8.62,Low,A
+MAT-00128,Ceramic Cable Gland-L,Raw Material,KG,16.64,Low,B
+MAT-00129,Carbon Steel Bushing,Component,EA,7.08,Medium,A
+MAT-00130,PVC Shaft-XL,Fastener,EA,11.12,Low,C
+MAT-00131,Carbon Steel Bracket 67mm,Packaging,EA,4.73,Medium,C
+MAT-00132,Galvanized Steel Housing,Raw Material,EA,73.84,Low,C
+MAT-00133,Rubber Shaft,Fastener,EA,9.95,Low,B
+MAT-00134,Carbon Steel Flange-L,Electronic,SET,32.54,High,C
+MAT-00135,Bronze Pulley,Component,EA,32.45,Low,B
+MAT-00136,Stainless Steel Stator Core 27mm,Electronic,EA,3.25,Low,B
+MAT-00137,Stainless Steel Filter Cartridge-XL,Component,EA,15.88,Low,B
+MAT-00138,PVC Valve Body 74mm,Component,EA,6.8,Medium,C
+MAT-00139,Copper Nozzle-XL,Fastener,EA,78.19,Medium,C
+MAT-00140,Copper Sensor,Fastener,L,5.91,Low,C
+MAT-00141,PVC Connector 79mm,Raw Material,EA,47.17,Medium,A
+MAT-00142,Galvanized Steel Impeller,Electronic,EA,23.69,Low,B
+MAT-00143,Cast Iron Shaft 41mm,Component,M,5.24,High,C
+MAT-00144,Aluminum Pulley 9mm,Component,KG,5.53,Medium,C
+MAT-00145,Nylon Circuit Board 65mm,Component,EA,18.48,Medium,C
+MAT-00146,Aluminum Bolt Set 63mm,Raw Material,EA,79.38,Medium,B
+MAT-00147,Chrome-Plated Relay 22mm,Raw Material,EA,17.82,Medium,C
+MAT-00148,Carbon Steel Relay,Component,EA,31.26,Medium,B
+MAT-00149,Copper Flange,Electronic,KG,5.3,Medium,B
+MAT-00150,Brass Chain Link,Component,KG,50.98,High,B
+MAT-00151,Brass Shaft 37mm,Component,SET,3.4,Medium,C
+MAT-00152,Bronze Flange 29mm,Raw Material,EA,2.02,Low,B
+MAT-00153,Bronze O-Ring 44mm,Electronic,EA,0.77,Medium,B
+MAT-00154,Ceramic Stator Core-M,Component,EA,11.69,Low,A
+MAT-00155,Chrome-Plated Diaphragm-L,Electronic,EA,4.71,Low,A
+MAT-00156,Bronze Switch,Raw Material,EA,1.05,Medium,C
+MAT-00157,Bronze Terminal Block,Packaging,EA,10.93,Medium,A
+MAT-00158,Zinc-Coated Shaft,Fastener,EA,29.92,High,C
+MAT-00159,Bronze Pulley,Component,KG,5.32,Low,A
+MAT-00160,PVC Circuit Board-S,Component,EA,0.61,Medium,C
+MAT-00161,Brass Diaphragm 48mm,Raw Material,KG,4.54,Low,B
+MAT-00162,Carbon Steel Impeller 58mm,Component,EA,74.1,Medium,C
+MAT-00163,Nylon Connector,Component,KG,18.22,Medium,C
+MAT-00164,Rubber Valve Body 69mm,Raw Material,M,2.57,Low,C
+MAT-00165,Bronze Bushing-S,Electronic,EA,33.4,Low,C
+MAT-00166,PVC Diaphragm 78mm,Component,EA,2.34,Medium,B
+MAT-00167,Cast Iron Flange,Component,EA,2.18,High,C
+MAT-00168,Zinc-Coated Seal 77mm,Component,EA,4.66,Low,C
+MAT-00169,Galvanized Steel Cable Gland,Component,KG,116.92,Low,C
+MAT-00170,Carbon Steel Terminal Block,Raw Material,EA,20.04,Medium,C
+MAT-00171,PVC Bracket-L,Raw Material,EA,5.4,Medium,C
+MAT-00172,Zinc-Coated Pulley-L,Component,EA,5.64,Low,B
+MAT-00173,Chrome-Plated Bracket-L,Electronic,M,4.76,Low,B
+MAT-00174,Nylon Bracket-M,Electronic,EA,3.37,Medium,A
+MAT-00175,Chrome-Plated Diaphragm,Electronic,EA,15.64,Medium,C
+MAT-00176,Nylon Rotor-M,Electronic,EA,2.17,Low,B
+MAT-00177,Rubber Stator Core 21mm,Component,KG,16.07,Low,B
+MAT-00178,Stainless Steel Nozzle-S,Raw Material,EA,4.02,Medium,B
+MAT-00179,Chrome-Plated Filter Cartridge,Fastener,EA,3.73,Medium,C
+MAT-00180,Stainless Steel Sensor 27mm,Raw Material,KG,54.76,Medium,B
+MAT-00181,Zinc-Coated Bracket,Raw Material,EA,4.73,Medium,A
+MAT-00182,Bronze Terminal Block,Raw Material,KG,7.26,Low,B
+MAT-00183,Rubber Bearing-M,Component,EA,8.9,Medium,C
+MAT-00184,Rubber Bracket,Component,EA,10.22,Medium,A
+MAT-00185,PVC Diaphragm,Raw Material,SET,0.69,High,C
+MAT-00186,Copper Gasket 68mm,Component,KG,5.21,High,C
+MAT-00187,Stainless Steel Cable Gland 19mm,Raw Material,EA,6.55,Medium,B
+MAT-00188,Carbon Steel Pulley-S,Electronic,EA,5.76,Low,C
+MAT-00189,Copper Bearing-L,Fastener,M,9.88,Medium,C
+MAT-00190,Zinc-Coated Seal-L,Raw Material,EA,8.09,Medium,B
+MAT-00191,Carbon Steel Bearing 23mm,Electronic,EA,135.82,Low,B
+MAT-00192,Aluminum Bearing,Component,EA,6.49,Medium,C
+MAT-00193,Brass Bushing,Fastener,M,20.05,High,A
+MAT-00194,Carbon Steel Chain Link-L,Raw Material,M,5.45,Medium,A
+MAT-00195,Ceramic Circuit Board-XL,Fastener,EA,4.6,Low,A
+MAT-00196,Brass Bracket,Component,EA,6.47,Medium,C
+MAT-00197,Cast Iron Circuit Board-S,Component,EA,2.49,Low,C
+MAT-00198,Copper Gasket 58mm,Component,EA,1.24,Medium,C
+MAT-00199,Rubber Rotor,Raw Material,M,2.43,High,A
+MAT-00200,Stainless Steel Bearing-L,Component,EA,15.87,High,A
+MAT-00201,Carbon Steel Switch 55mm,Component,SET,15.05,Low,A
+MAT-00202,Stainless Steel Wiring Harness,Electronic,EA,10.84,Medium,C
+MAT-00203,Stainless Steel Flange-XL,Component,EA,9.95,Low,A
+MAT-00204,PVC Diaphragm,Electronic,EA,60.0,High,C
+MAT-00205,Nylon Sprocket-M,Fastener,L,4.61,Medium,C
+MAT-00206,Copper Coupling 67mm,Raw Material,EA,33.58,Low,C
+MAT-00207,Nylon Stator Core-M,Raw Material,EA,38.9,Medium,C
+MAT-00208,Zinc-Coated Circuit Board-S,Fastener,KG,16.64,Medium,C
+MAT-00209,Galvanized Steel Shaft-M,Raw Material,KG,6.94,Medium,B
+MAT-00210,Carbon Steel Nozzle,Component,EA,3.83,High,C
+MAT-00211,Rubber Valve Body,Component,KG,13.6,High,A
+MAT-00212,Copper Nozzle,Packaging,EA,52.41,Low,A
+MAT-00213,Carbon Steel Flange,Component,M,18.65,High,B
+MAT-00214,Zinc-Coated Housing,Raw Material,EA,43.76,High,B
+MAT-00215,Bronze Bearing-XL,Component,M,12.02,Low,C
+MAT-00216,Ceramic Shaft,Component,EA,1.93,Low,C
+MAT-00217,Galvanized Steel Connector 17mm,Packaging,KG,18.13,Medium,C
+MAT-00218,Rubber Bracket 7mm,Electronic,KG,15.22,Medium,B
+MAT-00219,Nylon Housing 24mm,Raw Material,EA,1.84,Low,C
+MAT-00220,Aluminum Rotor 61mm,Component,KG,1.45,Medium,A
+MAT-00221,Aluminum Connector-M,Raw Material,EA,19.41,Low,C
+MAT-00222,Chrome-Plated Bracket-S,Raw Material,EA,25.81,High,C
+MAT-00223,Ceramic Stator Core,Component,EA,16.44,Low,C
+MAT-00224,Cast Iron Bolt Set,Component,SET,3.2,High,C
+MAT-00225,Zinc-Coated Valve Body-S,Raw Material,L,5.41,Low,C
+MAT-00226,Bronze Switch 52mm,Fastener,KG,1.56,Medium,A
+MAT-00227,Cast Iron Circuit Board,Raw Material,EA,5.42,Medium,C
+MAT-00228,PVC Bracket 33mm,Raw Material,EA,6.17,Medium,C
+MAT-00229,Nylon Wiring Harness-M,Component,M,8.82,High,A
+MAT-00230,Rubber Sensor 60mm,Component,EA,3.97,Low,A
+MAT-00231,Nylon Sensor-XL,Electronic,EA,15.43,Medium,C
+MAT-00232,Bronze Circuit Board-L,Raw Material,KG,16.63,Medium,C
+MAT-00233,Galvanized Steel Stator Core,Raw Material,EA,18.11,Medium,C
+MAT-00234,Chrome-Plated Filter Cartridge-M,Raw Material,KG,5.5,Medium,A
+MAT-00235,Copper Shaft,Raw Material,KG,7.24,Low,C
+MAT-00236,Cast Iron Nozzle-XL,Component,M,7.72,Medium,A
+MAT-00237,Stainless Steel Housing 24mm,Raw Material,M,1.84,Low,C
+MAT-00238,Galvanized Steel Seal,Component,M,10.02,Medium,C
+MAT-00239,Nylon Valve Body,Component,M,3.73,Medium,A
+MAT-00240,Bronze Relay 14mm,Raw Material,EA,0.87,Low,B
+MAT-00241,Nylon Diaphragm-L,Electronic,EA,15.38,Low,B
+MAT-00242,Aluminum Bushing 6mm,Raw Material,EA,3.56,Medium,A
+MAT-00243,Nylon Gasket-XL,Raw Material,M,13.12,Medium,C
+MAT-00244,Chrome-Plated Diaphragm,Raw Material,SET,4.97,Low,C
+MAT-00245,Ceramic Gasket,Raw Material,M,5.07,Low,B
+MAT-00246,PVC Switch-M,Packaging,SET,2.26,Low,C
+MAT-00247,PVC Cable Gland 6mm,Raw Material,KG,4.85,Medium,C
+MAT-00248,Rubber Sensor 60mm,Packaging,M,5.74,Low,B
+MAT-00249,Stainless Steel Switch 19mm,Raw Material,EA,3.27,Low,C
+MAT-00250,Cast Iron Diaphragm 66mm,Component,EA,15.71,Medium,A
+MAT-00251,Bronze Cable Gland 49mm,Electronic,EA,12.31,Low,A
+MAT-00252,Ceramic Pulley 49mm,Electronic,EA,20.52,Medium,C
+MAT-00253,Zinc-Coated Pulley 28mm,Electronic,EA,5.59,Low,C
+MAT-00254,PVC Chain Link 48mm,Packaging,EA,20.61,Low,B
+MAT-00255,Brass Seal,Raw Material,EA,9.92,Medium,C
+MAT-00256,Bronze Bearing 62mm,Component,EA,4.77,Low,C
+MAT-00257,Chrome-Plated Seal-XL,Component,EA,5.18,Medium,B
+MAT-00258,Zinc-Coated Circuit Board,Component,EA,21.64,High,C
+MAT-00259,Brass Bearing,Component,EA,8.3,High,B
+MAT-00260,Brass Filter Cartridge,Component,KG,23.64,Low,B
+MAT-00261,Cast Iron Chain Link 31mm,Electronic,SET,3.37,Medium,C
+MAT-00262,Nylon Diaphragm 41mm,Raw Material,EA,3.24,Medium,A
+MAT-00263,Nylon Relay,Component,KG,0.57,Medium,C
+MAT-00264,Chrome-Plated O-Ring,Raw Material,EA,1.83,High,B
+MAT-00265,Bronze Cable Gland 52mm,Component,EA,22.47,Medium,C
+MAT-00266,Bronze Relay-L,Electronic,EA,4.76,Low,C
+MAT-00267,Chrome-Plated Seal-S,Component,L,21.1,Medium,C
+MAT-00268,Cast Iron Chain Link,Component,EA,48.64,Medium,A
+MAT-00269,Brass Circuit Board 21mm,Electronic,KG,11.16,Medium,C
+MAT-00270,Galvanized Steel Sprocket-S,Component,KG,3.67,Medium,C
+MAT-00271,Chrome-Plated Wiring Harness-M,Electronic,KG,13.73,High,C
+MAT-00272,Copper Bearing 19mm,Raw Material,EA,18.18,Medium,C
+MAT-00273,Chrome-Plated Flange-S,Raw Material,KG,26.22,Low,B
+MAT-00274,Aluminum Bushing 76mm,Electronic,EA,14.44,Low,C
+MAT-00275,Galvanized Steel Terminal Block-L,Raw Material,KG,37.89,Low,C
+MAT-00276,Cast Iron Shaft,Component,EA,1.45,Low,C
+MAT-00277,Aluminum Filter Cartridge 77mm,Component,EA,7.65,Medium,C
+MAT-00278,Bronze Coupling 37mm,Component,KG,4.12,High,C
+MAT-00279,Nylon Rotor-L,Raw Material,EA,1.29,Medium,A
+MAT-00280,Bronze Valve Body 45mm,Raw Material,SET,1.83,Medium,C
+MAT-00281,Brass Circuit Board,Raw Material,SET,1.66,Medium,C
+MAT-00282,Bronze Bolt Set 52mm,Raw Material,EA,1.76,Low,B
+MAT-00283,Carbon Steel Bushing,Component,KG,18.15,Medium,B
+MAT-00284,Nylon Filter Cartridge 16mm,Component,EA,5.16,Low,C
+MAT-00285,Nylon Nozzle-M,Raw Material,EA,8.73,Medium,B
+MAT-00286,Ceramic Cable Gland,Component,EA,4.83,Low,C
+MAT-00287,Bronze Connector,Electronic,L,7.87,Low,C
+MAT-00288,Copper Diaphragm 78mm,Packaging,EA,2.48,Medium,C
+MAT-00289,Carbon Steel Connector 54mm,Component,EA,47.91,Low,C
+MAT-00290,PVC Coupling,Electronic,M,58.26,High,C
+MAT-00291,Ceramic Gasket 16mm,Raw Material,KG,106.03,Medium,C
+MAT-00292,PVC Rotor 38mm,Fastener,EA,14.97,Low,C
+MAT-00293,Stainless Steel Coupling-M,Raw Material,EA,4.59,High,C
+MAT-00294,Galvanized Steel Bolt Set-XL,Component,EA,11.11,Medium,A
+MAT-00295,Brass Valve Body-L,Component,KG,4.11,Low,B
+MAT-00296,Copper Chain Link 69mm,Component,EA,13.06,Medium,B
+MAT-00297,Nylon Diaphragm 58mm,Raw Material,EA,18.16,Low,C
+MAT-00298,Bronze Relay 60mm,Raw Material,KG,2.31,Low,C
+MAT-00299,Brass Coupling 57mm,Raw Material,KG,15.24,Medium,C
+MAT-00300,Chrome-Plated Pulley-M,Raw Material,M,15.74,Low,C
+MAT-00301,PVC Terminal Block,Raw Material,EA,6.29,Low,A
+MAT-00302,Bronze Terminal Block-S,Electronic,EA,10.7,Medium,C
+MAT-00303,Brass Bracket,Component,EA,11.06,High,A
+MAT-00304,Chrome-Plated Impeller,Packaging,EA,14.98,High,C
+MAT-00305,Chrome-Plated Gasket-XL,Fastener,KG,4.57,Low,C
+MAT-00306,Rubber Connector,Component,EA,6.37,Medium,C
+MAT-00307,PVC Chain Link,Component,M,5.83,Low,C
+MAT-00308,Nylon Nozzle 48mm,Component,L,15.34,High,C
+MAT-00309,Copper Terminal Block 47mm,Raw Material,M,3.43,High,A
+MAT-00310,Rubber Cable Gland,Component,EA,1.91,Low,C
+MAT-00311,Stainless Steel Bracket-M,Component,EA,128.24,High,C
+MAT-00312,Brass Sprocket 63mm,Packaging,EA,21.39,Medium,B
+MAT-00313,Galvanized Steel Sprocket 79mm,Raw Material,M,6.95,Medium,A
+MAT-00314,Bronze Stator Core 36mm,Raw Material,KG,11.15,Medium,C
+MAT-00315,Bronze Bracket-XL,Component,EA,13.58,Medium,B
+MAT-00316,Ceramic Bracket,Fastener,KG,32.09,Medium,A
+MAT-00317,Galvanized Steel Sprocket,Raw Material,EA,37.38,Medium,C
+MAT-00318,Stainless Steel Pulley,Component,M,39.79,Medium,A
+MAT-00319,Bronze Coupling-L,Component,EA,18.22,Medium,C
+MAT-00320,PVC Seal 29mm,Raw Material,KG,6.96,Medium,A
+MAT-00321,Carbon Steel O-Ring-M,Component,L,10.16,Low,C
+MAT-00322,Zinc-Coated Wiring Harness-S,Raw Material,EA,14.2,Medium,B
+MAT-00323,Ceramic Terminal Block-S,Electronic,M,9.51,Medium,B
+MAT-00324,Aluminum Diaphragm 58mm,Raw Material,EA,13.0,Low,C
+MAT-00325,Chrome-Plated Shaft-L,Component,SET,4.46,Medium,C
+MAT-00326,Zinc-Coated Impeller,Raw Material,KG,15.44,Low,C
+MAT-00327,PVC Gasket,Component,KG,5.26,Medium,C
+MAT-00328,Copper Gasket,Component,KG,15.11,High,B
+MAT-00329,Nylon Diaphragm-M,Component,EA,108.03,High,A
+MAT-00330,Aluminum Connector,Raw Material,KG,6.44,Medium,C
+MAT-00331,Carbon Steel Impeller,Fastener,EA,15.42,Medium,C
+MAT-00332,Copper Shaft,Packaging,KG,18.6,Medium,B
+MAT-00333,Aluminum Relay-L,Electronic,M,43.05,Low,C
+MAT-00334,Carbon Steel Switch-S,Component,EA,5.01,Medium,B
+MAT-00335,Rubber Flange-S,Raw Material,M,4.4,Low,C
+MAT-00336,Stainless Steel Diaphragm-XL,Fastener,EA,34.29,Medium,C
+MAT-00337,Chrome-Plated Stator Core 63mm,Raw Material,SET,4.04,Medium,B
+MAT-00338,Aluminum Nozzle 50mm,Packaging,KG,2.93,Medium,C
+MAT-00339,Rubber Circuit Board,Packaging,M,5.44,Low,C
+MAT-00340,Cast Iron Spring 25mm,Component,KG,2.59,High,C
+MAT-00341,Rubber Pulley 37mm,Component,SET,1.57,Low,C
+MAT-00342,Copper Connector,Raw Material,SET,21.59,Medium,B
+MAT-00343,Cast Iron Pulley-S,Component,KG,5.67,Low,B
+MAT-00344,Chrome-Plated O-Ring,Electronic,KG,19.0,Low,C
+MAT-00345,Cast Iron Impeller-M,Component,EA,5.82,Low,C
+MAT-00346,Carbon Steel Filter Cartridge-XL,Component,KG,12.55,Medium,C
+MAT-00347,Bronze Impeller 72mm,Raw Material,SET,14.33,Low,C
+MAT-00348,Galvanized Steel Diaphragm 5mm,Component,M,6.47,Medium,C
+MAT-00349,Aluminum Circuit Board-L,Component,EA,5.86,High,B
+MAT-00350,Bronze Pulley 15mm,Raw Material,KG,5.67,Medium,A
+MAT-00351,Ceramic Impeller,Component,EA,7.6,Low,C
+MAT-00352,Copper Housing-L,Electronic,KG,4.94,Low,B
+MAT-00353,Rubber Bolt Set 60mm,Component,SET,10.22,Low,C
+MAT-00354,Carbon Steel Sprocket-S,Component,EA,3.21,Medium,C
+MAT-00355,Aluminum Spring 5mm,Component,EA,2.45,Low,A
+MAT-00356,PVC Nozzle-XL,Component,KG,13.19,Medium,A
+MAT-00357,Aluminum O-Ring,Packaging,KG,2.63,Medium,C
+MAT-00358,Stainless Steel Relay 29mm,Component,EA,3.29,Low,A
+MAT-00359,Nylon Nozzle,Component,EA,1.67,Medium,C
+MAT-00360,Brass Bolt Set 49mm,Fastener,EA,15.89,High,B
+MAT-00361,Aluminum Switch-XL,Raw Material,EA,61.84,Medium,B
+MAT-00362,Brass Bushing,Electronic,EA,41.25,Low,A
+MAT-00363,Stainless Steel Stator Core 72mm,Raw Material,EA,19.11,Low,A
+MAT-00364,Cast Iron Wiring Harness-L,Component,EA,46.34,Low,B
+MAT-00365,Copper Impeller 11mm,Component,L,29.38,Medium,B
+MAT-00366,Copper Gasket-M,Component,KG,121.54,Medium,C
+MAT-00367,Rubber Coupling-M,Fastener,EA,4.93,Medium,A
+MAT-00368,Brass Nozzle-S,Component,L,23.23,High,C
+MAT-00369,Zinc-Coated O-Ring 4mm,Raw Material,EA,23.14,Low,B
+MAT-00370,Brass Gasket-XL,Component,EA,25.88,Medium,B
+MAT-00371,Brass Rotor-S,Raw Material,M,16.88,Medium,B
+MAT-00372,Stainless Steel Connector 64mm,Component,EA,35.02,High,C
+MAT-00373,Rubber Diaphragm-L,Component,EA,6.03,Medium,C
+MAT-00374,Brass Flange,Packaging,M,1.2,Medium,C
+MAT-00375,Zinc-Coated Nozzle,Component,KG,30.9,High,B
+MAT-00376,Ceramic Seal-L,Component,EA,67.85,Medium,C
+MAT-00377,Nylon Sensor,Component,EA,29.8,High,C
+MAT-00378,Aluminum Bushing,Component,EA,28.81,Medium,A
+MAT-00379,Chrome-Plated Housing-S,Raw Material,M,30.02,Low,C
+MAT-00380,Zinc-Coated Connector-S,Component,KG,19.84,Medium,C
+MAT-00381,Galvanized Steel Spring,Component,M,13.43,Medium,B
+MAT-00382,PVC Housing-L,Electronic,M,13.09,Medium,A
+MAT-00383,Zinc-Coated Stator Core 21mm,Raw Material,M,22.95,Low,A
+MAT-00384,PVC Connector 48mm,Component,SET,0.76,Medium,C
+MAT-00385,Rubber Filter Cartridge-L,Component,EA,7.35,Medium,C
+MAT-00386,Rubber Sensor 33mm,Component,EA,4.58,High,C
+MAT-00387,Chrome-Plated Rotor,Component,M,20.62,Medium,A
+MAT-00388,Bronze Relay,Component,KG,17.93,Medium,B
+MAT-00389,Rubber Connector-L,Component,KG,11.13,Medium,B
+MAT-00390,Rubber Filter Cartridge 16mm,Component,KG,25.42,High,C
+MAT-00391,Carbon Steel Valve Body-M,Raw Material,EA,3.32,Low,C
+MAT-00392,Stainless Steel Valve Body-S,Component,KG,48.0,Medium,C
+MAT-00393,Galvanized Steel Cable Gland-L,Raw Material,KG,16.57,Low,B
+MAT-00394,Brass Sprocket,Component,EA,17.96,Medium,C
+MAT-00395,Bronze Chain Link 49mm,Component,EA,60.3,Medium,C
+MAT-00396,Carbon Steel Shaft,Component,EA,10.12,High,C
+MAT-00397,Ceramic Filter Cartridge,Electronic,SET,2.95,High,B
+MAT-00398,Aluminum Nozzle-M,Raw Material,EA,6.9,High,A
+MAT-00399,Nylon Circuit Board-XL,Electronic,KG,82.56,Low,C
+MAT-00400,PVC Bracket-S,Packaging,KG,27.83,High,C
+MAT-00401,Aluminum Diaphragm 27mm,Component,KG,5.14,Medium,C
+MAT-00402,Copper Connector 45mm,Component,EA,103.75,Medium,C
+MAT-00403,Cast Iron Nozzle,Raw Material,KG,52.94,Low,B
+MAT-00404,Nylon Terminal Block 25mm,Component,M,13.34,High,A
+MAT-00405,Stainless Steel Diaphragm-L,Electronic,M,9.47,Medium,B
+MAT-00406,Chrome-Plated Shaft 40mm,Component,EA,16.68,Low,A
+MAT-00407,Ceramic Nozzle,Component,EA,25.15,Low,C
+MAT-00408,Cast Iron Spring-L,Component,EA,12.03,Low,C
+MAT-00409,PVC Bearing,Electronic,KG,8.7,Low,A
+MAT-00410,Brass Chain Link,Component,M,14.88,Medium,C
+MAT-00411,Carbon Steel Circuit Board 74mm,Raw Material,EA,5.26,High,A
+MAT-00412,Aluminum Gasket-XL,Electronic,EA,6.6,Medium,B
+MAT-00413,Galvanized Steel Wiring Harness,Component,EA,11.24,High,C
+MAT-00414,Nylon Diaphragm-M,Raw Material,KG,12.37,Low,A
+MAT-00415,Copper Wiring Harness 43mm,Raw Material,EA,10.26,Medium,C
+MAT-00416,Rubber Stator Core,Component,EA,8.08,Low,C
+MAT-00417,Aluminum Terminal Block-S,Raw Material,EA,10.93,Low,C
+MAT-00418,Rubber Pulley 76mm,Electronic,EA,2.88,Low,B
+MAT-00419,Cast Iron Housing,Component,L,60.46,Medium,C
+MAT-00420,Copper Bracket,Packaging,EA,9.79,High,C
+MAT-00421,Bronze Valve Body-XL,Raw Material,M,13.71,Low,C
+MAT-00422,PVC O-Ring 35mm,Component,EA,7.32,Medium,C
+MAT-00423,Bronze Valve Body-S,Raw Material,EA,6.07,Medium,A
+MAT-00424,Rubber Circuit Board,Raw Material,EA,16.33,Medium,B
+MAT-00425,Nylon Sprocket-M,Raw Material,EA,4.38,Low,C
+MAT-00426,Stainless Steel Chain Link-XL,Component,EA,4.03,Medium,C
+MAT-00427,Carbon Steel Filter Cartridge,Packaging,EA,2.36,Low,C
+MAT-00428,Galvanized Steel Cable Gland,Electronic,L,18.52,Low,C
+MAT-00429,Ceramic Shaft-XL,Component,M,11.56,Medium,B
+MAT-00430,Aluminum Sensor,Raw Material,KG,15.39,Low,C
+MAT-00431,Nylon O-Ring,Packaging,EA,6.88,Medium,B
+MAT-00432,Bronze Relay-L,Component,KG,5.39,Low,B
+MAT-00433,Galvanized Steel Shaft,Electronic,KG,3.13,Low,A
+MAT-00434,Stainless Steel Bolt Set-M,Raw Material,EA,3.07,High,B
+MAT-00435,Stainless Steel Wiring Harness,Fastener,EA,18.26,High,A
+MAT-00436,Nylon Terminal Block-XL,Fastener,EA,7.32,Medium,B
+MAT-00437,Zinc-Coated Nozzle 76mm,Raw Material,EA,7.28,Low,B
+MAT-00438,Carbon Steel Diaphragm-XL,Raw Material,EA,45.91,High,B
+MAT-00439,Carbon Steel Valve Body,Component,M,13.3,Medium,B
+MAT-00440,Rubber Sprocket 55mm,Component,KG,4.82,Medium,B
+MAT-00441,Ceramic Spring-L,Fastener,M,73.73,Low,B
+MAT-00442,PVC Switch-L,Electronic,EA,22.0,Medium,C
+MAT-00443,Nylon Pulley-S,Component,KG,9.77,Medium,A
+MAT-00444,Rubber Bushing,Raw Material,EA,7.15,Low,A
+MAT-00445,Rubber Cable Gland 59mm,Raw Material,EA,5.73,Medium,C
+MAT-00446,Stainless Steel Stator Core 66mm,Electronic,KG,71.98,High,C
+MAT-00447,Nylon Valve Body,Component,EA,5.56,Low,C
+MAT-00448,Zinc-Coated Flange-S,Electronic,EA,28.35,Medium,B
+MAT-00449,Aluminum Chain Link 9mm,Raw Material,EA,18.25,Medium,B
+MAT-00450,Ceramic Circuit Board,Fastener,M,10.63,Medium,B
+MAT-00451,Aluminum Sensor-S,Component,KG,32.3,Low,C
+MAT-00452,Stainless Steel Housing-S,Component,EA,6.23,Low,C
+MAT-00453,Zinc-Coated Bracket 43mm,Raw Material,EA,69.15,High,B
+MAT-00454,Ceramic Bolt Set-M,Fastener,L,10.77,Medium,C
+MAT-00455,Aluminum Valve Body 77mm,Raw Material,M,2.5,Low,C
+MAT-00456,Zinc-Coated O-Ring,Component,EA,0.88,Low,B
+MAT-00457,Carbon Steel Flange,Raw Material,KG,7.04,Medium,A
+MAT-00458,Stainless Steel Bracket,Packaging,EA,8.21,Low,C
+MAT-00459,Copper Impeller-XL,Raw Material,SET,9.78,Low,C
+MAT-00460,Stainless Steel Pulley 76mm,Component,EA,6.23,Medium,C
+MAT-00461,Zinc-Coated Stator Core,Component,EA,18.53,Low,B
+MAT-00462,PVC Stator Core 51mm,Raw Material,EA,23.42,Low,C
+MAT-00463,Cast Iron Connector 67mm,Fastener,EA,1.1,High,C
+MAT-00464,Copper Stator Core 50mm,Component,EA,38.48,Low,C
+MAT-00465,Ceramic Pulley-L,Packaging,EA,1.93,High,B
+MAT-00466,Ceramic Connector,Raw Material,M,9.65,Low,A
+MAT-00467,Galvanized Steel Nozzle,Raw Material,EA,0.37,Medium,B
+MAT-00468,Zinc-Coated Switch 22mm,Raw Material,EA,5.98,Low,C
+MAT-00469,PVC O-Ring 66mm,Component,KG,50.63,High,C
+MAT-00470,Chrome-Plated Bracket-XL,Raw Material,EA,3.51,Medium,B
+MAT-00471,PVC Switch 12mm,Component,EA,3.83,Low,B
+MAT-00472,Carbon Steel Bushing 45mm,Component,EA,39.0,High,B
+MAT-00473,Aluminum Stator Core-L,Fastener,M,1.41,Medium,C
+MAT-00474,Zinc-Coated Housing,Raw Material,EA,0.93,Medium,C
+MAT-00475,Galvanized Steel Connector,Component,M,14.97,Medium,A
+MAT-00476,Ceramic Coupling-L,Electronic,EA,38.09,Low,C
+MAT-00477,Carbon Steel Connector 19mm,Component,EA,4.02,Low,B
+MAT-00478,Chrome-Plated Rotor,Component,EA,19.96,High,C
+MAT-00479,Ceramic Bolt Set 37mm,Component,EA,33.61,Low,C
+MAT-00480,Carbon Steel Impeller 54mm,Raw Material,KG,15.27,Low,A
+MAT-00481,Galvanized Steel Gasket,Raw Material,EA,34.4,High,C
+MAT-00482,Rubber Terminal Block 25mm,Packaging,EA,10.85,Medium,C
+MAT-00483,Brass Rotor 36mm,Component,EA,6.97,Low,B
+MAT-00484,Aluminum Seal,Component,KG,10.57,Medium,A
+MAT-00485,Galvanized Steel Connector-M,Component,EA,12.39,Medium,B
+MAT-00486,Ceramic Impeller,Component,EA,21.37,High,C
+MAT-00487,Chrome-Plated Pulley,Component,M,50.13,Low,B
+MAT-00488,Nylon Diaphragm-XL,Raw Material,M,2.73,Low,B
+MAT-00489,Copper Sprocket 19mm,Component,EA,1.01,Medium,C
+MAT-00490,Nylon Filter Cartridge-S,Packaging,KG,6.8,High,C
+MAT-00491,Brass Bolt Set-XL,Component,KG,2.46,High,B
+MAT-00492,Brass Flange 56mm,Raw Material,EA,14.8,Medium,C
+MAT-00493,Aluminum Sprocket,Component,EA,33.07,Medium,C
+MAT-00494,Ceramic Sensor-M,Raw Material,EA,110.64,Medium,C
+MAT-00495,Galvanized Steel Impeller 75mm,Electronic,EA,27.43,Medium,C
+MAT-00496,Bronze Seal,Fastener,M,20.57,Medium,C
+MAT-00497,Brass Sensor 52mm,Raw Material,EA,43.71,Medium,C
+MAT-00498,PVC Sprocket,Raw Material,EA,11.88,High,C
+MAT-00499,Stainless Steel Bearing,Electronic,EA,47.69,Medium,B
+MAT-00500,Cast Iron Stator Core,Fastener,EA,46.05,Medium,C
