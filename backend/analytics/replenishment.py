@@ -50,20 +50,20 @@ def recommend_for_material(repo: Repository, material_id: str, plant_id: str) ->
 
     supplier = _pick_supplier(repo, material_id, prefer_fast=(health.status == "Shortage"))
     lead_time = supplier.lead_time_days if supplier else 0
-    adjusted_rop = policy.avg_daily_usage * lead_time + policy.safety_stock_qty
-    
+
     usable_qty = health.usable_qty
-    shortfall = max(adjusted_rop - usable_qty, 0)
+    rop = health.reorder_point_qty  # already from policy CSV — no re-calculation needed
+    shortfall = max(rop - usable_qty, 0)
     days_of_supply = round(usable_qty / policy.avg_daily_usage, 1) if policy.avg_daily_usage > 0 else 999.0
 
-    # 1. Usable stock is healthy/above lead-time-adjusted ROP — no action needed.
+    # 1. Usable stock is healthy/above ROP — no action needed.
     if shortfall <= 0:
         return ReplenishmentRecommendation(
             material_id=material_id, plant_id=plant_id,
             recommended_action="Monitor", priority_score=priority,
             lead_time_days=lead_time,
             rationale=(
-                f"On-hand {usable_qty:.0f} units vs. reorder point {adjusted_rop:.0f} units (lead-time adjusted); "
+                f"On-hand {usable_qty:.0f} units vs. reorder point {rop:.0f} units; "
                 f"{days_of_supply} days of supply remaining vs. {lead_time}-day lead time. Stock level is healthy."
             ),
         )
@@ -80,7 +80,7 @@ def recommend_for_material(repo: Repository, material_id: str, plant_id: str) ->
                 lead_time_days=lead_time,
                 priority_score=priority,
                 rationale=(
-                    f"On-hand {usable_qty:.0f} units vs. reorder point {adjusted_rop:.0f} units (lead-time adjusted); "
+                    f"On-hand {usable_qty:.0f} units vs. reorder point {rop:.0f} units; "
                     f"{days_of_supply} days of supply remaining vs. {lead_time}-day lead time. "
                     f"An open PO of {open_po_qty:.0f} units covers the shortfall but is late. Recommend expediting."
                 ),
@@ -91,7 +91,7 @@ def recommend_for_material(repo: Repository, material_id: str, plant_id: str) ->
                 recommended_action="Monitor", priority_score=priority,
                 lead_time_days=lead_time,
                 rationale=(
-                    f"On-hand {usable_qty:.0f} units vs. reorder point {adjusted_rop:.0f} units (lead-time adjusted); "
+                    f"On-hand {usable_qty:.0f} units vs. reorder point {rop:.0f} units; "
                     f"{days_of_supply} days of supply remaining vs. {lead_time}-day lead time. "
                     f"An open PO of {open_po_qty:.0f} units is on-time and covers the shortfall."
                 ),
@@ -109,7 +109,7 @@ def recommend_for_material(repo: Repository, material_id: str, plant_id: str) ->
             lead_time_days=lead_time,
             priority_score=priority,
             rationale=(
-                f"On-hand {usable_qty:.0f} units vs. reorder point {adjusted_rop:.0f} units (lead-time adjusted); "
+                f"On-hand {usable_qty:.0f} units vs. reorder point {rop:.0f} units; "
                 f"{days_of_supply} days of supply remaining vs. {lead_time}-day lead time; "
                 f"open PO of {open_po_qty:.0f} units is {'late' if coverage.has_late_po else 'insufficient'} (net shortfall {net_shortfall:.0f} units). "
                 f"Plant {donor_plant} has {available:.0f} units of surplus above safety stock; recommend transferring {transfer_needed:.0f} units."
@@ -119,7 +119,7 @@ def recommend_for_material(repo: Repository, material_id: str, plant_id: str) ->
     # 4. Purchase order creation (Replenish / Restore Safety Stock)
     base_qty = max(policy.reorder_qty, net_shortfall)
     moq = supplier.moq if supplier else 0
-    
+
     if supplier:
         if base_qty <= moq:
             recommended_qty = moq
@@ -129,9 +129,9 @@ def recommend_for_material(repo: Repository, material_id: str, plant_id: str) ->
         recommended_qty = int(base_qty)
 
     action = "Restore Safety Stock" if usable_qty < policy.safety_stock_qty else "Replenish"
-    
+
     rationale_str = (
-        f"On-hand {usable_qty:.0f} units vs. reorder point {adjusted_rop:.0f} units (lead-time adjusted); "
+        f"On-hand {usable_qty:.0f} units vs. reorder point {rop:.0f} units; "
         f"{days_of_supply} days of supply remaining vs. {lead_time}-day lead time; "
         f"open PO of {open_po_qty:.0f} units is insufficient (net shortfall {net_shortfall:.0f} units). "
         f"Recommend ordering {recommended_qty} units"

@@ -1,17 +1,17 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
-import { i as cn, n as Button, r as api } from "./api-BvsAdfBD.mjs";
-import { i as CardTitle, n as CardContent, r as CardHeader, t as Card } from "./card-DNn1texp.mjs";
+import { i as cn, n as Button, r as api } from "./api-CvgU3YZp.mjs";
+import { i as CardTitle, n as CardContent, r as CardHeader, t as Card } from "./card-FWEPwnHu.mjs";
 import { E as Download, c as SquareCheckBig, i as TriangleAlert, j as ChevronDown, p as ShieldAlert, s as Square, t as X, v as PackageX } from "../_libs/lucide-react.mjs";
-import { t as Skeleton } from "./skeleton-coEUFSch.mjs";
-import { i as DropdownMenuTrigger, n as DropdownMenuContent, r as DropdownMenuItem, t as DropdownMenu } from "./dropdown-menu-nNcayZpm.mjs";
+import { t as Skeleton } from "./skeleton-CTfZ-LAW.mjs";
+import { i as DropdownMenuTrigger, n as DropdownMenuContent, r as DropdownMenuItem, t as DropdownMenu } from "./dropdown-menu-BFkmOnnx.mjs";
 import { i as useQueryClient, n as useQuery, t as useMutation } from "../_libs/tanstack__react-query.mjs";
-import { t as Input } from "./input-BZC_VnU5.mjs";
-import { t as Route } from "./recommendations-Dujm8yQC.mjs";
-import { a as TableHead, i as TableCell, n as Table, o as TableHeader, r as TableBody, s as TableRow, t as Badge } from "./badge-D-WmSVGe.mjs";
+import { t as Input } from "./input-UeNrrxUk.mjs";
+import { t as Route } from "./recommendations-Dw8IuSG1.mjs";
+import { a as TableHead, i as TableCell, n as Table, o as TableHeader, r as TableBody, s as TableRow, t as Badge } from "./badge-DmY8Zsjp.mjs";
 import { n as toast } from "../_libs/sonner.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/recommendations-BtCVXSDy.js
+//#region node_modules/.nitro/vite/services/ssr/assets/recommendations-DiuP1BBy.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function PriorityText({ priority }) {

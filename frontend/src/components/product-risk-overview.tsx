@@ -15,6 +15,8 @@ import { Search, ArrowUpDown, X } from "lucide-react";
 import { api, type ProductRiskRow } from "@/lib/api";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+
 import {
   Table,
   TableBody,
@@ -40,7 +42,16 @@ export function ProductRiskOverview() {
     queryFn: api.productRisk,
   });
 
+  const [selectedMaterial, setSelectedMaterial] = useState<ProductRiskRow | null>(null);
+
+  const { data: usage = [], isLoading: isUsageLoading, error: usageError } = useQuery({
+    queryKey: ["material-usage", selectedMaterial?.material_id, selectedMaterial?.plant_id],
+    queryFn: () => selectedMaterial ? api.materialUsage(selectedMaterial.material_id, selectedMaterial.plant_id) : Promise.resolve([]),
+    enabled: !!selectedMaterial,
+  });
+
   // Client-side state for sorting and filtering
+
   const [search, setSearch] = useState("");
   const [selectedPlant, setSelectedPlant] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
@@ -240,8 +251,10 @@ export function ProductRiskOverview() {
         </CardContent>
       </Card>
 
-      {/* 2. Detailed Table Card */}
-      <Card className="shadow-sm bg-white rounded-xl border border-border">
+      {/* 2. Detailed Table Card wrapped in grid */}
+      <div className={cn("grid gap-6", selectedMaterial ? "lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[2fr_1fr]" : "grid-cols-1")}>
+        <Card className="shadow-sm bg-white rounded-xl border border-border flex flex-col">
+
         <CardHeader className="border-b border-border/50 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <CardTitle className="text-base font-bold text-foreground">
@@ -396,16 +409,23 @@ export function ProductRiskOverview() {
                   </TableRow>
                 </TableHeader>
                 <TableBody>
-                  {paginatedRows.map((row, i) => (
-                    <TableRow
-                      key={`${row.material_id}-${row.plant_id}-${i}`}
-                      className="hover:bg-slate-50/50 cursor-pointer border-b border-slate-100"
-                      onClick={() => {
-                        window.location.href = `/materials/${encodeURIComponent(
-                          row.material_id
-                        )}/${encodeURIComponent(row.plant_id)}`;
-                      }}
-                    >
+                  {paginatedRows.map((row, i) => {
+                    const isSel =
+                      selectedMaterial?.material_id === row.material_id &&
+                      selectedMaterial?.plant_id === row.plant_id;
+
+                    return (
+                      <TableRow
+                        key={`${row.material_id}-${row.plant_id}-${i}`}
+                        className={cn(
+                          "cursor-pointer border-b border-slate-100 transition-colors",
+                          isSel ? "bg-primary/5 border-primary/20" : "hover:bg-slate-50/50"
+                        )}
+                        onClick={() => {
+                          setSelectedMaterial(row);
+                        }}
+                      >
+
                       <TableCell className="font-semibold text-slate-900">
                         <div>{row.material_id}</div>
                         <div className="text-[10px] font-normal text-muted-foreground truncate max-w-[150px]">
@@ -450,7 +470,9 @@ export function ProductRiskOverview() {
                         </span>
                       </TableCell>
                     </TableRow>
-                  ))}
+                    );
+                  })}
+
                 </TableBody>
               </Table>
             </div>
@@ -491,6 +513,96 @@ export function ProductRiskOverview() {
           )}
         </CardContent>
       </Card>
+
+      {selectedMaterial && (
+        <Card className="shadow-sm bg-white rounded-xl border border-border flex flex-col max-h-[800px] animate-in slide-in-from-right-4 fade-in duration-300">
+          <CardHeader className="flex flex-row items-center justify-between border-b border-border/50 pb-4">
+            <CardTitle className="text-base font-bold text-foreground">Material Usage Detail</CardTitle>
+            <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:bg-muted" onClick={() => setSelectedMaterial(null)}>
+              <X className="h-4 w-4" />
+            </Button>
+          </CardHeader>
+          <CardContent className="p-0 flex flex-col flex-1 min-h-0">
+            <div className="p-6 space-y-6 flex-1 overflow-y-auto">
+              <div className="flex justify-between items-start">
+                <div>
+                  <div className="text-xs text-muted-foreground mb-1">Selected Material</div>
+                  <div className="text-xl font-bold text-foreground">{selectedMaterial.material_id}</div>
+                  <div className="text-sm text-muted-foreground mt-0.5">{selectedMaterial.material_name}</div>
+                </div>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="text-xs bg-white"
+                  onClick={() => {
+                    window.location.href = `/materials/${encodeURIComponent(selectedMaterial.material_id)}/${encodeURIComponent(selectedMaterial.plant_id)}`;
+                  }}
+                >
+                  View Details
+                </Button>
+              </div>
+              <div>
+                <div className="text-xs text-muted-foreground mb-1">Plant Location</div>
+                <div className="text-base font-bold text-foreground">{selectedMaterial.plant_id}</div>
+              </div>
+              
+              <div className="pt-4 border-t border-border/50 space-y-3">
+                <h4 className="text-xs font-bold text-slate-700 uppercase tracking-wider">Used in Finished Goods</h4>
+                
+                {isUsageLoading ? (
+                  <div className="space-y-2">
+                    <Skeleton className="h-8 w-full" />
+                    <Skeleton className="h-8 w-full" />
+                  </div>
+                ) : usageError ? (
+                  <div className="text-xs text-red-500 font-semibold">Error loading usage: {(usageError as Error).message}</div>
+                ) : usage.length === 0 ? (
+                  <div className="p-4 text-center border border-dashed rounded-lg text-xs text-slate-400 bg-slate-50/50">
+                    Not used in any finished products' BOM.
+                  </div>
+                ) : (
+                  <div className="border border-slate-200 rounded-lg overflow-hidden">
+                    <Table className="text-xs">
+                      <TableHeader className="bg-slate-50/50">
+                        <TableRow>
+                          <TableHead className="font-semibold text-slate-500 h-8">Product</TableHead>
+                          <TableHead className="font-semibold text-slate-500 h-8">Plant</TableHead>
+                          <TableHead className="font-semibold text-slate-500 h-8">Status</TableHead>
+                          <TableHead className="font-semibold text-slate-500 h-8 text-right">Qty/Unit</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {usage.map((item, idx) => (
+                          <TableRow key={`${item.product_id}-${idx}`} className={cn("hover:bg-slate-50/30", item.is_blocking ? "bg-red-50/30 hover:bg-red-50/50" : "")}>
+                            <TableCell className="font-semibold text-slate-900 p-2.5">
+                              <div>{item.product_id}</div>
+                              <div className="text-[10px] font-normal text-muted-foreground truncate max-w-[120px]">{item.product_name}</div>
+                            </TableCell>
+                            <TableCell className="p-2.5 text-slate-600">{item.plant_id}</TableCell>
+                            <TableCell className="p-2.5">
+                              <div className="flex flex-col gap-1 items-start">
+                                <StatusBadge status={item.risk_status} className="scale-90 origin-left" />
+                                {item.is_blocking && (
+                                  <span className="inline-block text-[9px] font-bold text-red-600 bg-red-50 border border-red-100 rounded px-1">
+                                    BLOCKING COMPONENT
+                                  </span>
+                                )}
+                              </div>
+                            </TableCell>
+                            <TableCell className="p-2.5 text-right font-medium tabular-nums">{item.qty_per_unit.toFixed(3)}</TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </div>
+                )}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      )}
     </div>
+  </div>
+
   );
 }

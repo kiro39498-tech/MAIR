@@ -1,8 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
-import { r as api, t as ApiError } from "./api-BvsAdfBD.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/chat-context-Bbk7U3T9.js
+import { r as api, t as ApiError } from "./api-CvgU3YZp.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/chat-context-DCdEs1cM.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var ChatContext = (0, import_react.createContext)(null);

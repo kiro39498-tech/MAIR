@@ -268,12 +268,38 @@ class BlockingComponent(BaseModel):
     shortfall: float
 
 
+class BomComponent(BaseModel):
+    """Full BOM component entry — every material in the product's BOM,
+    regardless of health status.  Non-blocking entries have shortfall=0."""
+    material_id: str
+    material_name: str
+    health_status: str
+    usable_qty: float
+    reorder_point: float
+    safety_stock: float
+    qty_per_unit: float
+    net_shortfall: float  # 0 for Healthy/Excess, positive only for blockers
+    is_blocking: bool
+    has_inventory_data: bool  # False when component has no policy at this plant
+
+
 class ProductBomRiskRow(BaseModel):
     product_id: str
     product_name: str
     plant_id: str
     risk_status: str
     blocking_components: list[BlockingComponent]
+    all_components: list[BomComponent]  # full BOM with all statuses
     priority_score: float
+
+
+class MaterialUsageRow(BaseModel):
+    product_id: str
+    product_name: str
+    plant_id: str
+    risk_status: str
+    qty_per_unit: float
+    is_blocking: bool
+
 
 

@@ -46,24 +46,16 @@ def get_material_health(repo: Repository, material_id: str, plant_id: str) -> Ma
     policy = repo.policy_by_key.get((material_id, plant_id))
     if policy is None:
         return None
-    
-    # Calculate lead-time adjusted ROP
-    from analytics.replenishment import _pick_supplier
-    supplier = _pick_supplier(repo, material_id)
-    lead_time = supplier.lead_time_days if supplier else 0
-    adjusted_rop = policy.avg_daily_usage * lead_time + policy.safety_stock_qty
-    
-    policy_adjusted = policy.model_copy(update={"reorder_point_qty": adjusted_rop})
-    
+
     usable = get_usable_inventory(repo, material_id, plant_id)
-    status, reason = classify(usable, policy_adjusted)
+    status, reason = classify(usable, policy)
     return MaterialHealth(
         material_id=material_id,
         plant_id=plant_id,
         usable_qty=usable,
-        safety_stock_qty=policy_adjusted.safety_stock_qty,
-        reorder_point_qty=policy_adjusted.reorder_point_qty,
-        max_stock_qty=policy_adjusted.max_stock_qty,
+        safety_stock_qty=policy.safety_stock_qty,
+        reorder_point_qty=policy.reorder_point_qty,
+        max_stock_qty=policy.max_stock_qty,
         status=status,
         reason=reason,
     )

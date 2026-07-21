@@ -3,23 +3,23 @@ import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
 import { n as Slot } from "../_libs/@radix-ui/react-primitive+[...].mjs";
 import { t as cva } from "../_libs/class-variance-authority+clsx.mjs";
-import { i as cn, n as Button } from "./api-BvsAdfBD.mjs";
-import { t as ChatProvider } from "./chat-context-Bbk7U3T9.mjs";
+import { i as cn, n as Button } from "./api-CvgU3YZp.mjs";
+import { t as ChatProvider } from "./chat-context-DCdEs1cM.mjs";
 import { C as ListChecks, T as Factory, b as MessageSquare, g as PanelLeft, t as X, w as LayoutDashboard } from "../_libs/lucide-react.mjs";
 import { c as HeadContent, d as createRouter, f as Outlet, g as Link, h as createRootRouteWithContext, l as useRouterState, m as createFileRoute, p as lazyRouteComponent, s as Scripts, v as useRouter } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as Skeleton } from "./skeleton-coEUFSch.mjs";
+import { t as Skeleton } from "./skeleton-CTfZ-LAW.mjs";
 import { a as Portal, i as Overlay, n as Content, o as Root, r as Description, s as Title, t as Close } from "../_libs/@radix-ui/react-dialog+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { r as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-import { t as Input } from "./input-BZC_VnU5.mjs";
-import { t as Route$5 } from "./recommendations-Dujm8yQC.mjs";
+import { t as Input } from "./input-UeNrrxUk.mjs";
+import { t as Route$5 } from "./recommendations-Dw8IuSG1.mjs";
 import { t as Toaster } from "../_libs/sonner.mjs";
 import { t as Root$1 } from "../_libs/radix-ui__react-separator.mjs";
 import { a as Trigger, i as Root3, n as Portal$1, r as Provider, t as Content2 } from "../_libs/radix-ui__react-tooltip.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-B3UAb1Vl.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BEUy5NlC.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-DA_UkWLZ.css";
+var styles_default = "/assets/styles-CYOeRTvw.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -709,11 +709,11 @@ function RootComponent() {
 }
 var $$splitComponentImporter$3 = () => import("./materials-WNUCCXQC.mjs");
 var Route$3 = createFileRoute("/materials")({ component: lazyRouteComponent($$splitComponentImporter$3, "component") });
-var $$splitComponentImporter$2 = () => import("./copilot-06XgeEtD.mjs");
+var $$splitComponentImporter$2 = () => import("./copilot-CS7VDe26.mjs");
 var Route$2 = createFileRoute("/copilot")({ component: lazyRouteComponent($$splitComponentImporter$2, "component") });
-var $$splitComponentImporter$1 = () => import("./routes-B81x5FRg.mjs");
+var $$splitComponentImporter$1 = () => import("./routes-Ds-WP9pG.mjs");
 var Route$1 = createFileRoute("/")({ component: lazyRouteComponent($$splitComponentImporter$1, "component") });
-var $$splitComponentImporter = () => import("./materials._materialId._plantId-Odt-r3TO.mjs");
+var $$splitComponentImporter = () => import("./materials._materialId._plantId-DXSj8XwM.mjs");
 var Route = createFileRoute("/materials/$materialId/$plantId")({ component: lazyRouteComponent($$splitComponentImporter, "component") });
 var RecommendationsRoute = Route$5.update({
 	id: "/recommendations",

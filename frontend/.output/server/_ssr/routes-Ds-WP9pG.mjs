@@ -1,16 +1,16 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
-import { i as cn, n as Button, r as api } from "./api-BvsAdfBD.mjs";
-import { i as CardTitle, n as CardContent, r as CardHeader, t as Card } from "./card-DNn1texp.mjs";
+import { i as cn, n as Button, r as api } from "./api-CvgU3YZp.mjs";
+import { i as CardTitle, n as CardContent, r as CardHeader, t as Card } from "./card-FWEPwnHu.mjs";
 import { I as ArrowUpDown, M as Check, O as CircleAlert, P as Boxes, h as Search, i as TriangleAlert, j as ChevronDown, k as ChevronUp, l as SquareActivity, p as ShieldAlert, t as X, v as PackageX, y as PackagePlus } from "../_libs/lucide-react.mjs";
-import { t as Skeleton } from "./skeleton-coEUFSch.mjs";
+import { t as Skeleton } from "./skeleton-CTfZ-LAW.mjs";
 import { n as useQuery } from "../_libs/tanstack__react-query.mjs";
-import { t as Input } from "./input-BZC_VnU5.mjs";
-import { a as TableHead, i as TableCell, n as Table, o as TableHeader, r as TableBody, s as TableRow, t as Badge } from "./badge-D-WmSVGe.mjs";
+import { t as Input } from "./input-UeNrrxUk.mjs";
+import { a as TableHead, i as TableCell, n as Table, o as TableHeader, r as TableBody, s as TableRow, t as Badge } from "./badge-DmY8Zsjp.mjs";
 import { a as ItemText, c as Root2, d as Separator, f as Trigger, i as ItemIndicator, l as ScrollDownButton, m as Viewport, n as Icon, o as Label, p as Value, r as Item, s as Portal, t as Content2, u as ScrollUpButton } from "../_libs/@radix-ui/react-select+[...].mjs";
 import { a as Bar, c as Tooltip, i as CartesianGrid, n as YAxis, o as Cell, r as XAxis, s as ResponsiveContainer, t as BarChart } from "../_libs/recharts+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B81x5FRg.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Ds-WP9pG.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var Select = Root2;
@@ -101,6 +101,16 @@ function ProductRiskOverview() {
 	const { data: rows = [], isLoading, error } = useQuery({
 		queryKey: ["product-risk"],
 		queryFn: api.productRisk
+	});
+	const [selectedMaterial, setSelectedMaterial] = (0, import_react.useState)(null);
+	const { data: usage = [], isLoading: isUsageLoading, error: usageError } = useQuery({
+		queryKey: [
+			"material-usage",
+			selectedMaterial?.material_id,
+			selectedMaterial?.plant_id
+		],
+		queryFn: () => selectedMaterial ? api.materialUsage(selectedMaterial.material_id, selectedMaterial.plant_id) : Promise.resolve([]),
+		enabled: !!selectedMaterial
 	});
 	const [search, setSearch] = (0, import_react.useState)("");
 	const [selectedPlant, setSelectedPlant] = (0, import_react.useState)("all");
@@ -287,259 +297,392 @@ function ProductRiskOverview() {
 					})
 				})
 			})]
-		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
-			className: "shadow-sm bg-white rounded-xl border border-border",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
-				className: "border-b border-border/50 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
-					className: "text-base font-bold text-foreground",
-					children: "Material-Wise Health Posture"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "text-xs text-muted-foreground mt-1",
-					children: "Table sorted by priority score (descending) by default."
-				})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex flex-wrap items-center gap-3",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "relative",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
-								placeholder: "Search material...",
-								value: search,
-								onChange: (e) => {
-									setSearch(e.target.value);
-									setCurrentPage(1);
-								},
-								className: "pl-8 h-9 w-48 text-xs bg-white rounded-lg shadow-sm"
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Select, {
-							value: selectedPlant,
-							onValueChange: (val) => {
-								setSelectedPlant(val);
-								setCurrentPage(1);
-							},
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectTrigger, {
-								className: "h-9 w-36 text-xs bg-white rounded-lg shadow-sm",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, { placeholder: "All Plants" })
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectContent, {
-								className: "bg-white",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-									value: "all",
-									children: "All Plants"
-								}), uniquePlants.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-									value: p,
-									children: p
-								}, p))]
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Select, {
-							value: selectedStatus,
-							onValueChange: (val) => {
-								setSelectedStatus(val);
-								setCurrentPage(1);
-							},
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectTrigger, {
-								className: "h-9 w-44 text-xs bg-white rounded-lg shadow-sm",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, { placeholder: "All Statuses" })
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectContent, {
-								className: "bg-white",
-								children: [
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-										value: "all",
-										children: "All Statuses"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-										value: "Healthy",
-										children: "Healthy"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-										value: "Near Reorder",
-										children: "Near Reorder"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-										value: "Safety Stock Warning",
-										children: "Safety Stock Warning"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-										value: "Shortage",
-										children: "Shortage"
-									}),
-									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-										value: "Excess",
-										children: "Excess"
-									})
-								]
-							})]
-						}),
-						isFiltered && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
-							variant: "ghost",
-							size: "sm",
-							onClick: clearFilters,
-							className: "h-9 text-xs gap-1 hover:bg-slate-100 shrink-0",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-3 w-3" }), " Reset"]
-						})
-					]
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
-				className: "p-0",
-				children: [isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "space-y-2 p-6",
-					children: Array.from({ length: 5 }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Skeleton, { className: "h-10 w-full rounded-md" }, i))
-				}) : !sortedRows.length ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "p-8 text-center text-sm text-muted-foreground",
-					children: "No matching materials found for the active filters."
-				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-					className: "overflow-x-auto",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Table, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-						className: "bg-slate-50/50 hover:bg-transparent",
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: cn("grid gap-6", selectedMaterial ? "lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[2fr_1fr]" : "grid-cols-1"),
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+				className: "shadow-sm bg-white rounded-xl border border-border flex flex-col",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
+					className: "border-b border-border/50 pb-4 flex flex-col md:flex-row md:items-center justify-between gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+						className: "text-base font-bold text-foreground",
+						children: "Material-Wise Health Posture"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-xs text-muted-foreground mt-1",
+						children: "Table sorted by priority score (descending) by default."
+					})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex flex-wrap items-center gap-3",
 						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("material_id"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-1",
-									children: ["Material ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("plant_id"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center gap-1",
-									children: ["Plant ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "font-bold text-slate-700",
-								children: "Status"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "text-right cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("on_hand_qty"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-end gap-1",
-									children: ["Usable Qty ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "text-right cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("reorder_point"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-end gap-1",
-									children: ["Reorder Point ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "text-right cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("safety_stock"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-end gap-1",
-									children: ["Safety Stock ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "text-right cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("days_of_supply"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-end gap-1",
-									children: ["Days of Supply ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
-								className: "text-right cursor-pointer font-bold text-slate-700",
-								onClick: () => toggleSort("priority_score"),
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-									className: "flex items-center justify-end gap-1",
-									children: ["Priority Score ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
-								})
-							})
-						]
-					}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableBody, { children: paginatedRows.map((row, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-						className: "hover:bg-slate-50/50 cursor-pointer border-b border-slate-100",
-						onClick: () => {
-							window.location.href = `/materials/${encodeURIComponent(row.material_id)}/${encodeURIComponent(row.plant_id)}`;
-						},
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableCell, {
-								className: "font-semibold text-slate-900",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: row.material_id }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-									className: "text-[10px] font-normal text-muted-foreground truncate max-w-[150px]",
-									children: row.material_name
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "relative",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Input, {
+									placeholder: "Search material...",
+									value: search,
+									onChange: (e) => {
+										setSearch(e.target.value);
+										setCurrentPage(1);
+									},
+									className: "pl-8 h-9 w-48 text-xs bg-white rounded-lg shadow-sm"
 								})]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-								className: "text-slate-600",
-								children: row.plant_id
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Select, {
+								value: selectedPlant,
+								onValueChange: (val) => {
+									setSelectedPlant(val);
+									setCurrentPage(1);
+								},
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectTrigger, {
+									className: "h-9 w-36 text-xs bg-white rounded-lg shadow-sm",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, { placeholder: "All Plants" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectContent, {
+									className: "bg-white",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+										value: "all",
+										children: "All Plants"
+									}), uniquePlants.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+										value: p,
+										children: p
+									}, p))]
+								})]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBadge, { status: row.health_status }) }),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-								className: "text-right font-medium text-slate-900 tabular-nums",
-								children: row.on_hand_qty.toLocaleString()
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Select, {
+								value: selectedStatus,
+								onValueChange: (val) => {
+									setSelectedStatus(val);
+									setCurrentPage(1);
+								},
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectTrigger, {
+									className: "h-9 w-44 text-xs bg-white rounded-lg shadow-sm",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, { placeholder: "All Statuses" })
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectContent, {
+									className: "bg-white",
+									children: [
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+											value: "all",
+											children: "All Statuses"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+											value: "Healthy",
+											children: "Healthy"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+											value: "Near Reorder",
+											children: "Near Reorder"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+											value: "Safety Stock Warning",
+											children: "Safety Stock Warning"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+											value: "Shortage",
+											children: "Shortage"
+										}),
+										/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+											value: "Excess",
+											children: "Excess"
+										})
+									]
+								})]
 							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-								className: "text-right text-slate-600 tabular-nums",
-								children: row.reorder_point.toLocaleString()
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-								className: "text-right text-slate-600 tabular-nums",
-								children: row.safety_stock.toLocaleString()
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-								className: `text-right font-semibold tabular-nums ${row.days_of_supply < 10 ? "text-red-600" : row.days_of_supply < 20 ? "text-amber-600" : "text-slate-600"}`,
-								children: row.days_of_supply === 9999 ? "—" : row.days_of_supply.toFixed(1)
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-								className: "text-right tabular-nums",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: `inline-block font-bold text-xs px-2 py-0.5 rounded-full ${row.priority_score >= .8 ? "bg-red-50 text-red-700 border border-red-100" : row.priority_score >= .5 ? "bg-amber-50 text-amber-700 border border-amber-100" : "bg-slate-50 text-slate-700 border border-slate-100"}`,
-									children: row.priority_score.toFixed(3)
-								})
-							})
-						]
-					}, `${row.material_id}-${row.plant_id}-${i}`)) })] })
-				}), totalPages > 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "flex items-center justify-between border-t border-slate-100 p-4",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
-						className: "text-xs text-muted-foreground font-medium",
-						children: [
-							"Showing ",
-							(currentPage - 1) * ITEMS_PER_PAGE + 1,
-							"-",
-							Math.min(currentPage * ITEMS_PER_PAGE, sortedRows.length),
-							" of ",
-							sortedRows.length,
-							" ",
-							"items"
-						]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "flex gap-2",
-						children: [
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								variant: "outline",
+							isFiltered && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+								variant: "ghost",
 								size: "sm",
-								onClick: () => setCurrentPage((p) => Math.max(1, p - 1)),
-								disabled: currentPage === 1,
-								className: "text-xs h-8 bg-white border-slate-200",
-								children: "Previous"
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex items-center gap-1.5 text-xs text-slate-600 font-bold px-1",
-								children: [
-									currentPage,
-									" of ",
-									totalPages
-								]
-							}),
-							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
-								variant: "outline",
-								size: "sm",
-								onClick: () => setCurrentPage((p) => Math.min(totalPages, p + 1)),
-								disabled: currentPage === totalPages,
-								className: "text-xs h-8 bg-white border-slate-200",
-								children: "Next"
+								onClick: clearFilters,
+								className: "h-9 text-xs gap-1 hover:bg-slate-100 shrink-0",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-3 w-3" }), " Reset"]
 							})
 						]
 					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardContent, {
+					className: "p-0",
+					children: [isLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "space-y-2 p-6",
+						children: Array.from({ length: 5 }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Skeleton, { className: "h-10 w-full rounded-md" }, i))
+					}) : !sortedRows.length ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "p-8 text-center text-sm text-muted-foreground",
+						children: "No matching materials found for the active filters."
+					}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "overflow-x-auto",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Table, { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
+							className: "bg-slate-50/50 hover:bg-transparent",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("material_id"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-1",
+										children: ["Material ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("plant_id"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center gap-1",
+										children: ["Plant ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "font-bold text-slate-700",
+									children: "Status"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "text-right cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("on_hand_qty"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-end gap-1",
+										children: ["Usable Qty ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "text-right cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("reorder_point"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-end gap-1",
+										children: ["Reorder Point ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "text-right cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("safety_stock"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-end gap-1",
+										children: ["Safety Stock ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "text-right cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("days_of_supply"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-end gap-1",
+										children: ["Days of Supply ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+									className: "text-right cursor-pointer font-bold text-slate-700",
+									onClick: () => toggleSort("priority_score"),
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+										className: "flex items-center justify-end gap-1",
+										children: ["Priority Score ", /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ArrowUpDown, { className: "h-3 w-3" })]
+									})
+								})
+							]
+						}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableBody, { children: paginatedRows.map((row, i) => {
+							return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
+								className: cn("cursor-pointer border-b border-slate-100 transition-colors", selectedMaterial?.material_id === row.material_id && selectedMaterial?.plant_id === row.plant_id ? "bg-primary/5 border-primary/20" : "hover:bg-slate-50/50"),
+								onClick: () => {
+									setSelectedMaterial(row);
+								},
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableCell, {
+										className: "font-semibold text-slate-900",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: row.material_id }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+											className: "text-[10px] font-normal text-muted-foreground truncate max-w-[150px]",
+											children: row.material_name
+										})]
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+										className: "text-slate-600",
+										children: row.plant_id
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBadge, { status: row.health_status }) }),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+										className: "text-right font-medium text-slate-900 tabular-nums",
+										children: row.on_hand_qty.toLocaleString()
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+										className: "text-right text-slate-600 tabular-nums",
+										children: row.reorder_point.toLocaleString()
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+										className: "text-right text-slate-600 tabular-nums",
+										children: row.safety_stock.toLocaleString()
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+										className: `text-right font-semibold tabular-nums ${row.days_of_supply < 10 ? "text-red-600" : row.days_of_supply < 20 ? "text-amber-600" : "text-slate-600"}`,
+										children: row.days_of_supply === 9999 ? "—" : row.days_of_supply.toFixed(1)
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+										className: "text-right tabular-nums",
+										children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+											className: `inline-block font-bold text-xs px-2 py-0.5 rounded-full ${row.priority_score >= .8 ? "bg-red-50 text-red-700 border border-red-100" : row.priority_score >= .5 ? "bg-amber-50 text-amber-700 border border-amber-100" : "bg-slate-50 text-slate-700 border border-slate-100"}`,
+											children: row.priority_score.toFixed(3)
+										})
+									})
+								]
+							}, `${row.material_id}-${row.plant_id}-${i}`);
+						}) })] })
+					}), totalPages > 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center justify-between border-t border-slate-100 p-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "text-xs text-muted-foreground font-medium",
+							children: [
+								"Showing ",
+								(currentPage - 1) * ITEMS_PER_PAGE + 1,
+								"-",
+								Math.min(currentPage * ITEMS_PER_PAGE, sortedRows.length),
+								" of ",
+								sortedRows.length,
+								" ",
+								"items"
+							]
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex gap-2",
+							children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									variant: "outline",
+									size: "sm",
+									onClick: () => setCurrentPage((p) => Math.max(1, p - 1)),
+									disabled: currentPage === 1,
+									className: "text-xs h-8 bg-white border-slate-200",
+									children: "Previous"
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-center gap-1.5 text-xs text-slate-600 font-bold px-1",
+									children: [
+										currentPage,
+										" of ",
+										totalPages
+									]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									variant: "outline",
+									size: "sm",
+									onClick: () => setCurrentPage((p) => Math.min(totalPages, p + 1)),
+									disabled: currentPage === totalPages,
+									className: "text-xs h-8 bg-white border-slate-200",
+									children: "Next"
+								})
+							]
+						})]
+					})]
+				})]
+			}), selectedMaterial && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Card, {
+				className: "shadow-sm bg-white rounded-xl border border-border flex flex-col max-h-[800px] animate-in slide-in-from-right-4 fade-in duration-300",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CardHeader, {
+					className: "flex flex-row items-center justify-between border-b border-border/50 pb-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
+						className: "text-base font-bold text-foreground",
+						children: "Material Usage Detail"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+						variant: "ghost",
+						size: "icon",
+						className: "h-8 w-8 text-muted-foreground hover:bg-muted",
+						onClick: () => setSelectedMaterial(null),
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-4 w-4" })
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardContent, {
+					className: "p-0 flex flex-col flex-1 min-h-0",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "p-6 space-y-6 flex-1 overflow-y-auto",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "flex justify-between items-start",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-xs text-muted-foreground mb-1",
+										children: "Selected Material"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-xl font-bold text-foreground",
+										children: selectedMaterial.material_id
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										className: "text-sm text-muted-foreground mt-0.5",
+										children: selectedMaterial.material_name
+									})
+								] }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+									variant: "outline",
+									size: "sm",
+									className: "text-xs bg-white",
+									onClick: () => {
+										window.location.href = `/materials/${encodeURIComponent(selectedMaterial.material_id)}/${encodeURIComponent(selectedMaterial.plant_id)}`;
+									},
+									children: "View Details"
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-xs text-muted-foreground mb-1",
+								children: "Plant Location"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-base font-bold text-foreground",
+								children: selectedMaterial.plant_id
+							})] }),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "pt-4 border-t border-border/50 space-y-3",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h4", {
+									className: "text-xs font-bold text-slate-700 uppercase tracking-wider",
+									children: "Used in Finished Goods"
+								}), isUsageLoading ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "space-y-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Skeleton, { className: "h-8 w-full" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Skeleton, { className: "h-8 w-full" })]
+								}) : usageError ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "text-xs text-red-500 font-semibold",
+									children: ["Error loading usage: ", usageError.message]
+								}) : usage.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "p-4 text-center border border-dashed rounded-lg text-xs text-slate-400 bg-slate-50/50",
+									children: "Not used in any finished products' BOM."
+								}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									className: "border border-slate-200 rounded-lg overflow-hidden",
+									children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Table, {
+										className: "text-xs",
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHeader, {
+											className: "bg-slate-50/50",
+											children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, { children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+													className: "font-semibold text-slate-500 h-8",
+													children: "Product"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+													className: "font-semibold text-slate-500 h-8",
+													children: "Plant"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+													className: "font-semibold text-slate-500 h-8",
+													children: "Status"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+													className: "font-semibold text-slate-500 h-8 text-right",
+													children: "Qty/Unit"
+												})
+											] })
+										}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableBody, { children: usage.map((item, idx) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
+											className: cn("hover:bg-slate-50/30", item.is_blocking ? "bg-red-50/30 hover:bg-red-50/50" : ""),
+											children: [
+												/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableCell, {
+													className: "font-semibold text-slate-900 p-2.5",
+													children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: item.product_id }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+														className: "text-[10px] font-normal text-muted-foreground truncate max-w-[120px]",
+														children: item.product_name
+													})]
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+													className: "p-2.5 text-slate-600",
+													children: item.plant_id
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+													className: "p-2.5",
+													children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+														className: "flex flex-col gap-1 items-start",
+														children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StatusBadge, {
+															status: item.risk_status,
+															className: "scale-90 origin-left"
+														}), item.is_blocking && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+															className: "inline-block text-[9px] font-bold text-red-600 bg-red-50 border border-red-100 rounded px-1",
+															children: "BLOCKING COMPONENT"
+														})]
+													})
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+													className: "p-2.5 text-right font-medium tabular-nums",
+													children: item.qty_per_unit.toFixed(3)
+												})
+											]
+										}, `${item.product_id}-${idx}`)) })]
+									})
+								})]
+							})
+						]
+					})
 				})]
 			})]
 		})]
@@ -547,11 +690,11 @@ function ProductRiskOverview() {
 }
 function ProductBomRiskOverview() {
 	const { data: rows = [], isLoading, error } = useQuery({
-		queryKey: ["product-bom-risk"],
-		queryFn: api.productBomRisk
+		queryKey: ["product-bom-risk", selectedPlant],
+		queryFn: () => api.productBomRisk(selectedPlant === "primary" ? void 0 : { plantId: selectedPlant })
 	});
 	const [search, setSearch] = (0, import_react.useState)("");
-	const [selectedPlant, setSelectedPlant] = (0, import_react.useState)("all");
+	const [selectedPlant, setSelectedPlant] = (0, import_react.useState)("primary");
 	const [selectedStatus, setSelectedStatus] = (0, import_react.useState)("all");
 	const [sortBy, setSortBy] = (0, import_react.useState)("priority_score");
 	const [sortOrder, setSortOrder] = (0, import_react.useState)("desc");
@@ -571,7 +714,6 @@ function ProductBomRiskOverview() {
 			"Excess": 0
 		};
 		rows.forEach((r) => {
-			if (selectedPlant !== "all" && r.plant_id !== selectedPlant) return;
 			if (counts[r.risk_status] !== void 0) counts[r.risk_status]++;
 		});
 		return Object.keys(counts).map((key) => ({
@@ -579,18 +721,16 @@ function ProductBomRiskOverview() {
 			value: counts[key],
 			fill: STATUS_COLORS[key] ?? "#94a3b8"
 		}));
-	}, [rows, selectedPlant]);
+	}, [rows]);
 	const filteredRows = (0, import_react.useMemo)(() => {
 		return rows.filter((r) => {
 			const matchesSearch = r.product_id.toLowerCase().includes(search.toLowerCase()) || r.product_name.toLowerCase().includes(search.toLowerCase());
-			const matchesPlant = selectedPlant === "all" || r.plant_id === selectedPlant;
 			const matchesStatus = selectedStatus === "all" || r.risk_status === selectedStatus;
-			return matchesSearch && matchesPlant && matchesStatus;
+			return matchesSearch && matchesStatus;
 		});
 	}, [
 		rows,
 		search,
-		selectedPlant,
 		selectedStatus
 	]);
 	const sortedRows = (0, import_react.useMemo)(() => {
@@ -643,11 +783,11 @@ function ProductBomRiskOverview() {
 	};
 	const clearFilters = () => {
 		setSearch("");
-		setSelectedPlant("all");
+		setSelectedPlant("primary");
 		setSelectedStatus("all");
 		setCurrentPage(1);
 	};
-	const isFiltered = search !== "" || selectedPlant !== "all" || selectedStatus !== "all";
+	const isFiltered = search !== "" || selectedPlant !== "primary" || selectedStatus !== "all";
 	if (error) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Card, {
 		className: "rounded-xl border border-destructive/20 bg-destructive/5 p-6",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -758,7 +898,7 @@ function ProductBomRiskOverview() {
 					children: "Finished Product Health Posture"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "text-xs text-muted-foreground mt-1",
-					children: "Refined finished good risk based on worst-case component availability. Click row to expand blockers."
+					children: "Refined finished good risk based on worst-case component availability. Click row to expand full BOM."
 				})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex flex-wrap items-center gap-3",
 					children: [
@@ -781,17 +921,24 @@ function ProductBomRiskOverview() {
 								setCurrentPage(1);
 							},
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectTrigger, {
-								className: "h-9 w-36 text-xs bg-white rounded-lg shadow-sm",
-								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, { placeholder: "All Plants" })
+								className: "h-9 w-44 text-xs bg-white rounded-lg shadow-sm",
+								children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectValue, { placeholder: "Primary Plant" })
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectContent, {
 								className: "bg-white",
-								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-									value: "all",
-									children: "All Plants"
-								}), uniquePlants.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
-									value: p,
-									children: p
-								}, p))]
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+										value: "primary",
+										children: "Primary Plant (default)"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SelectItem, {
+										value: "all",
+										children: "All Plants"
+									}),
+									uniquePlants.map((p) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(SelectItem, {
+										value: p,
+										children: [p, " only"]
+									}, p))
+								]
 							})]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Select, {
@@ -948,12 +1095,32 @@ function ProductBomRiskOverview() {
 								className: "p-4 pl-12 border-t border-slate-100",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 									className: "border border-slate-200/80 rounded-lg overflow-hidden bg-white shadow-xs",
-									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 										className: "bg-slate-50 border-b border-slate-100 p-2.5 text-xs font-bold text-slate-700 flex justify-between",
-										children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: ["BOM COMPONENTS AFFECTING PRODUCTION FOR ", row.product_id] })
-									}), !row.blocking_components.length ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+											"BOM COMPONENTS FOR ",
+											row.product_id,
+											" @ ",
+											row.plant_id
+										] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+											className: "font-normal text-muted-foreground",
+											children: [
+												row.all_components.length,
+												" component",
+												row.all_components.length !== 1 ? "s" : "",
+												row.blocking_components.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+													className: "text-red-600 font-semibold ml-2",
+													children: [
+														"· ",
+														row.blocking_components.length,
+														" blocking"
+													]
+												})
+											]
+										})]
+									}), !row.all_components.length ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 										className: "p-4 text-xs text-slate-500 text-center",
-										children: "All component items are healthy at this plant. No production bottlenecks."
+										children: "No BOM component data available for this product."
 									}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Table, {
 										className: "text-xs",
 										children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHeader, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
@@ -965,7 +1132,15 @@ function ProductBomRiskOverview() {
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
 													className: "h-8 font-semibold text-slate-500",
+													children: "Name"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+													className: "h-8 font-semibold text-slate-500",
 													children: "Status"
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
+													className: "h-8 text-right font-semibold text-slate-500",
+													children: "Qty / Unit"
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableHead, {
 													className: "h-8 text-right font-semibold text-slate-500",
@@ -980,15 +1155,19 @@ function ProductBomRiskOverview() {
 													children: "Net Shortfall"
 												})
 											]
-										}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableBody, { children: row.blocking_components.map((comp, j) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
-											className: "hover:bg-slate-50/30 cursor-pointer",
+										}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableBody, { children: row.all_components.map((comp, j) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(TableRow, {
+											className: `cursor-pointer ${comp.is_blocking ? "bg-red-50/30 hover:bg-red-50/60" : "hover:bg-slate-50/30"}`,
 											onClick: () => {
-												window.location.href = `/materials/${encodeURIComponent(comp.material_id)}/${encodeURIComponent(row.plant_id)}`;
+												if (comp.has_inventory_data) window.location.href = `/materials/${encodeURIComponent(comp.material_id)}/${encodeURIComponent(row.plant_id)}`;
 											},
 											children: [
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 													className: "font-semibold text-slate-900 p-3",
 													children: comp.material_id
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+													className: "text-slate-600 p-3 max-w-[160px] truncate",
+													children: comp.material_name
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 													className: "p-3",
@@ -998,16 +1177,32 @@ function ProductBomRiskOverview() {
 													})
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-													className: "text-right tabular-nums p-3",
-													children: comp.usable_qty.toLocaleString()
+													className: "text-right tabular-nums p-3 text-slate-500",
+													children: comp.qty_per_unit.toFixed(3)
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
 													className: "text-right tabular-nums p-3",
-													children: comp.reorder_point.toLocaleString()
+													children: comp.has_inventory_data ? comp.usable_qty.toLocaleString() : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-slate-400 italic",
+														children: "—"
+													})
 												}),
 												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
-													className: "text-right tabular-nums font-bold text-red-600 p-3",
-													children: comp.shortfall.toLocaleString()
+													className: "text-right tabular-nums p-3",
+													children: comp.has_inventory_data ? comp.reorder_point.toLocaleString() : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-slate-400 italic",
+														children: "—"
+													})
+												}),
+												/* @__PURE__ */ (0, import_jsx_runtime.jsx)(TableCell, {
+													className: "text-right tabular-nums p-3",
+													children: comp.net_shortfall > 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "font-bold text-red-600",
+														children: comp.net_shortfall.toLocaleString()
+													}) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+														className: "text-slate-400",
+														children: "—"
+													})
 												})
 											]
 										}, `${comp.material_id}-${j}`)) })]
@@ -1132,7 +1327,7 @@ function DashboardPage() {
 						className: "flex flex-row items-center justify-between space-y-0 pb-3",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CardTitle, {
 							className: "text-xs font-bold tracking-widest text-muted-foreground uppercase",
-							children: "Total Rows"
+							children: "Total Materials"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 							className: "p-1.5 rounded-md bg-slate-50",
 							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Boxes, { className: "h-4 w-4 text-slate-500" })

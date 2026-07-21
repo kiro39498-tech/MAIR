@@ -27,12 +27,12 @@ const STATUS_META: {
   borderColor: string;
   bgColor: string;
 }[] = [
-  { key: "Healthy", label: "HEALTHY", icon: ActivitySquare, accent: "text-emerald-500", borderColor: "border-emerald-200", bgColor: "bg-emerald-50" },
-  { key: "Near Reorder", label: "NEAR REORDER", icon: AlertTriangle, accent: "text-amber-500", borderColor: "border-amber-200", bgColor: "bg-amber-50" },
-  { key: "Safety Stock Warning", label: "SAFETY STOCK", icon: ShieldAlert, accent: "text-orange-500", borderColor: "border-orange-200", bgColor: "bg-orange-50" },
-  { key: "Shortage", label: "SHORTAGE", icon: PackageX, accent: "text-red-500", borderColor: "border-red-200", bgColor: "bg-red-50" },
-  { key: "Excess", label: "EXCESS", icon: PackagePlus, accent: "text-indigo-500", borderColor: "border-indigo-200", bgColor: "bg-indigo-50" },
-];
+    { key: "Healthy", label: "HEALTHY", icon: ActivitySquare, accent: "text-emerald-500", borderColor: "border-emerald-200", bgColor: "bg-emerald-50" },
+    { key: "Near Reorder", label: "NEAR REORDER", icon: AlertTriangle, accent: "text-amber-500", borderColor: "border-amber-200", bgColor: "bg-amber-50" },
+    { key: "Safety Stock Warning", label: "SAFETY STOCK", icon: ShieldAlert, accent: "text-orange-500", borderColor: "border-orange-200", bgColor: "bg-orange-50" },
+    { key: "Shortage", label: "SHORTAGE", icon: PackageX, accent: "text-red-500", borderColor: "border-red-200", bgColor: "bg-red-50" },
+    { key: "Excess", label: "EXCESS", icon: PackagePlus, accent: "text-indigo-500", borderColor: "border-indigo-200", bgColor: "bg-indigo-50" },
+  ];
 
 function DashboardPage() {
   const summaryQ = useQuery({ queryKey: ["summary"], queryFn: api.summary });
@@ -57,7 +57,7 @@ function DashboardPage() {
         <Card className="border border-border shadow-sm bg-white rounded-xl">
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-3">
             <CardTitle className="text-xs font-bold tracking-widest text-muted-foreground uppercase">
-              Total Rows
+              Total Materials
             </CardTitle>
             <div className="p-1.5 rounded-md bg-slate-50">
               <Boxes className="h-4 w-4 text-slate-500" />
@@ -68,7 +68,7 @@ function DashboardPage() {
               <Skeleton className="h-8 w-16" />
             ) : (
               <div className="space-y-1">
-                <div className="text-[24px] leading-none font-bold text-slate-900">{totalRisky}</div>
+                <div className="text-[24px] leading-none font-bold text-slate-900">{summaryQ.data?.total_rows ?? 0}</div>
                 <div className="w-4 border-b-[3px] border-border pt-2" />
               </div>
             )}

@@ -76,6 +76,10 @@ class Repository:
         for mgr in self.managers:
             self.managers_by_plant[mgr.plant_id].append(mgr)
 
+    def products_using_material(self, material_id: str) -> list[BomLine]:
+        return self.bom_by_material.get(material_id, [])
+
+
 
 @lru_cache(maxsize=1)
 def get_repository() -> Repository:

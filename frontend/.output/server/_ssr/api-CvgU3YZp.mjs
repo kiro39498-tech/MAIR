@@ -4,7 +4,7 @@ import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].m
 import { n as Slot } from "../_libs/@radix-ui/react-primitive+[...].mjs";
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/api-BvsAdfBD.js
+//#region node_modules/.nitro/vite/services/ssr/assets/api-CvgU3YZp.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
@@ -72,7 +72,14 @@ async function request(path, init) {
 var api = {
 	summary: () => request("/api/dashboard/summary"),
 	productRisk: () => request("/api/dashboard/product-risk"),
-	productBomRisk: () => request("/api/dashboard/product-bom-risk"),
+	productBomRisk: (params) => {
+		const q = new URLSearchParams();
+		if (params?.plantId) q.set("plant_id", params.plantId);
+		if (params?.healthStatus) q.set("health_status", params.healthStatus);
+		const qs = q.toString();
+		return request(`/api/dashboard/product-bom-risk${qs ? `?${qs}` : ""}`);
+	},
+	materialUsage: (materialId, plantId) => request(`/api/dashboard/material-usage/${encodeURIComponent(materialId)}${plantId ? `?plant_id=${encodeURIComponent(plantId)}` : ""}`),
 	materials: (params) => {
 		const q = new URLSearchParams();
 		if (params?.status) q.set("status", params.status);

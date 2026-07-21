@@ -1,11 +1,11 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { u as require_react } from "../_libs/@floating-ui/react-dom+[...].mjs";
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
-import { i as cn, n as Button } from "./api-BvsAdfBD.mjs";
-import { n as useChat } from "./chat-context-Bbk7U3T9.mjs";
-import { n as CardContent, t as Card } from "./card-DNn1texp.mjs";
+import { i as cn, n as Button } from "./api-CvgU3YZp.mjs";
+import { n as useChat } from "./chat-context-DCdEs1cM.mjs";
+import { n as CardContent, t as Card } from "./card-FWEPwnHu.mjs";
 import { F as Bot, S as LoaderCircle, m as Send, n as User, o as Trash2, u as Sparkles } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/copilot-06XgeEtD.js
+//#region node_modules/.nitro/vite/services/ssr/assets/copilot-CS7VDe26.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var Textarea = import_react.forwardRef(({ className, ...props }, ref) => {

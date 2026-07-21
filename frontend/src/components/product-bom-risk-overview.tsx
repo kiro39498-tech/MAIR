@@ -12,7 +12,7 @@ import {
 } from "recharts";
 import { Search, ArrowUpDown, X, ChevronDown, ChevronUp, AlertCircle } from "lucide-react";
 
-import { api, type ProductBomRiskRow } from "@/lib/api";
+import { api, type ProductBomRiskRow, type BomComponent } from "@/lib/api";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import {
@@ -35,14 +35,9 @@ import { StatusBadge, STATUS_COLORS } from "@/components/status-badge";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export function ProductBomRiskOverview() {
-  const { data: rows = [], isLoading, error } = useQuery({
-    queryKey: ["product-bom-risk"],
-    queryFn: api.productBomRisk,
-  });
-
-  // Client-side filtering & sorting state
+  // Client-side filtering & sorting state — declared first so useQuery can reference selectedPlant
   const [search, setSearch] = useState("");
-  const [selectedPlant, setSelectedPlant] = useState<string>("all");
+  const [selectedPlant, setSelectedPlant] = useState<string>("primary");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const [sortBy, setSortBy] = useState<keyof ProductBomRiskRow | "blocker_count">("priority_score");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
@@ -50,7 +45,14 @@ export function ProductBomRiskOverview() {
   const [expandedRows, setExpandedRows] = useState<Record<string, boolean>>({});
   const ITEMS_PER_PAGE = 10;
 
-  // 1. Get unique plant list for filter dropdown
+  const { data: rows = [], isLoading, error } = useQuery({
+    queryKey: ["product-bom-risk", selectedPlant],
+    queryFn: () => api.productBomRisk(
+      selectedPlant === "primary" ? undefined : { plantId: selectedPlant }
+    ),
+  });
+
+  // 1. Unique plants shown in current data (for display in dropdown)
   const uniquePlants = useMemo(() => {
     const plants = new Set(rows.map((r) => r.plant_id));
     return Array.from(plants).sort();
@@ -67,7 +69,6 @@ export function ProductBomRiskOverview() {
     };
 
     rows.forEach((r) => {
-      if (selectedPlant !== "all" && r.plant_id !== selectedPlant) return;
       if (counts[r.risk_status] !== undefined) {
         counts[r.risk_status]++;
       }
@@ -78,21 +79,21 @@ export function ProductBomRiskOverview() {
       value: counts[key],
       fill: STATUS_COLORS[key] ?? "#94a3b8",
     }));
-  }, [rows, selectedPlant]);
+  }, [rows]);
 
-  // 3. Filter rows based on search, plant selection, and status selection
+  // 3. Filter rows based on search and status selection
+  // Plant scoping is handled server-side via the selectedPlant query param
   const filteredRows = useMemo(() => {
     return rows.filter((r) => {
       const matchesSearch =
         r.product_id.toLowerCase().includes(search.toLowerCase()) ||
         r.product_name.toLowerCase().includes(search.toLowerCase());
 
-      const matchesPlant = selectedPlant === "all" || r.plant_id === selectedPlant;
       const matchesStatus = selectedStatus === "all" || r.risk_status === selectedStatus;
 
-      return matchesSearch && matchesPlant && matchesStatus;
+      return matchesSearch && matchesStatus;
     });
-  }, [rows, search, selectedPlant, selectedStatus]);
+  }, [rows, search, selectedStatus]);
 
   // 4. Sort rows
   const sortedRows = useMemo(() => {
@@ -156,12 +157,12 @@ export function ProductBomRiskOverview() {
 
   const clearFilters = () => {
     setSearch("");
-    setSelectedPlant("all");
+    setSelectedPlant("primary");
     setSelectedStatus("all");
     setCurrentPage(1);
   };
 
-  const isFiltered = search !== "" || selectedPlant !== "all" || selectedStatus !== "all";
+  const isFiltered = search !== "" || selectedPlant !== "primary" || selectedStatus !== "all";
 
   if (error) {
     return (
@@ -260,7 +261,7 @@ export function ProductBomRiskOverview() {
               Finished Product Health Posture
             </CardTitle>
             <p className="text-xs text-muted-foreground mt-1">
-              Refined finished good risk based on worst-case component availability. Click row to expand blockers.
+              Refined finished good risk based on worst-case component availability. Click row to expand full BOM.
             </p>
           </div>
 
@@ -286,14 +287,15 @@ export function ProductBomRiskOverview() {
                 setCurrentPage(1);
               }}
             >
-              <SelectTrigger className="h-9 w-36 text-xs bg-white rounded-lg shadow-sm">
-                <SelectValue placeholder="All Plants" />
+              <SelectTrigger className="h-9 w-44 text-xs bg-white rounded-lg shadow-sm">
+                <SelectValue placeholder="Primary Plant" />
               </SelectTrigger>
               <SelectContent className="bg-white">
+                <SelectItem value="primary">Primary Plant (default)</SelectItem>
                 <SelectItem value="all">All Plants</SelectItem>
                 {uniquePlants.map((p) => (
                   <SelectItem key={p} value={p}>
-                    {p}
+                    {p} only
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -443,37 +445,67 @@ export function ProductBomRiskOverview() {
                             <TableCell colSpan={6} className="p-4 pl-12 border-t border-slate-100">
                               <div className="border border-slate-200/80 rounded-lg overflow-hidden bg-white shadow-xs">
                                 <div className="bg-slate-50 border-b border-slate-100 p-2.5 text-xs font-bold text-slate-700 flex justify-between">
-                                  <span>BOM COMPONENTS AFFECTING PRODUCTION FOR {row.product_id}</span>
+                                  <span>BOM COMPONENTS FOR {row.product_id} @ {row.plant_id}</span>
+                                  <span className="font-normal text-muted-foreground">
+                                    {row.all_components.length} component{row.all_components.length !== 1 ? "s" : ""}
+                                    {row.blocking_components.length > 0 && (
+                                      <span className="text-red-600 font-semibold ml-2">
+                                        · {row.blocking_components.length} blocking
+                                      </span>
+                                    )}
+                                  </span>
                                 </div>
-                                {!row.blocking_components.length ? (
+                                {!row.all_components.length ? (
                                   <div className="p-4 text-xs text-slate-500 text-center">
-                                    All component items are healthy at this plant. No production bottlenecks.
+                                    No BOM component data available for this product.
                                   </div>
                                 ) : (
                                   <Table className="text-xs">
                                     <TableHeader>
                                       <TableRow className="bg-transparent hover:bg-transparent">
                                         <TableHead className="h-8 font-semibold text-slate-500">Component</TableHead>
+                                        <TableHead className="h-8 font-semibold text-slate-500">Name</TableHead>
                                         <TableHead className="h-8 font-semibold text-slate-500">Status</TableHead>
+                                        <TableHead className="h-8 text-right font-semibold text-slate-500">Qty / Unit</TableHead>
                                         <TableHead className="h-8 text-right font-semibold text-slate-500">Usable Stock</TableHead>
                                         <TableHead className="h-8 text-right font-semibold text-slate-500">Reorder Point</TableHead>
                                         <TableHead className="h-8 text-right font-semibold text-slate-500 text-red-600">Net Shortfall</TableHead>
                                       </TableRow>
                                     </TableHeader>
                                     <TableBody>
-                                      {row.blocking_components.map((comp, j) => (
+                                      {row.all_components.map((comp, j) => (
                                         <TableRow
                                           key={`${comp.material_id}-${j}`}
-                                          className="hover:bg-slate-50/30 cursor-pointer"
+                                          className={`cursor-pointer ${
+                                            comp.is_blocking
+                                              ? "bg-red-50/30 hover:bg-red-50/60"
+                                              : "hover:bg-slate-50/30"
+                                          }`}
                                           onClick={() => {
-                                            window.location.href = `/materials/${encodeURIComponent(comp.material_id)}/${encodeURIComponent(row.plant_id)}`;
+                                            if (comp.has_inventory_data) {
+                                              window.location.href = `/materials/${encodeURIComponent(comp.material_id)}/${encodeURIComponent(row.plant_id)}`;
+                                            }
                                           }}
                                         >
                                           <TableCell className="font-semibold text-slate-900 p-3">{comp.material_id}</TableCell>
-                                          <TableCell className="p-3"><StatusBadge status={comp.health_status} className="scale-90 origin-left" /></TableCell>
-                                          <TableCell className="text-right tabular-nums p-3">{comp.usable_qty.toLocaleString()}</TableCell>
-                                          <TableCell className="text-right tabular-nums p-3">{comp.reorder_point.toLocaleString()}</TableCell>
-                                          <TableCell className="text-right tabular-nums font-bold text-red-600 p-3">{comp.shortfall.toLocaleString()}</TableCell>
+                                          <TableCell className="text-slate-600 p-3 max-w-[160px] truncate">{comp.material_name}</TableCell>
+                                          <TableCell className="p-3">
+                                            <StatusBadge status={comp.health_status} className="scale-90 origin-left" />
+                                          </TableCell>
+                                          <TableCell className="text-right tabular-nums p-3 text-slate-500">{comp.qty_per_unit.toFixed(3)}</TableCell>
+                                          <TableCell className="text-right tabular-nums p-3">
+                                            {comp.has_inventory_data ? comp.usable_qty.toLocaleString() : <span className="text-slate-400 italic">—</span>}
+                                          </TableCell>
+                                          <TableCell className="text-right tabular-nums p-3">
+                                            {comp.has_inventory_data ? comp.reorder_point.toLocaleString() : <span className="text-slate-400 italic">—</span>}
+                                          </TableCell>
+                                          <TableCell className="text-right tabular-nums p-3">
+                                            {comp.net_shortfall > 0 ? (
+                                              <span className="font-bold text-red-600">{comp.net_shortfall.toLocaleString()}</span>
+                                            ) : (
+                                              <span className="text-slate-400">—</span>
+                                            )}
+                                          </TableCell>
                                         </TableRow>
                                       ))}
                                     </TableBody>

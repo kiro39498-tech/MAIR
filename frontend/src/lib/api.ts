@@ -112,20 +112,55 @@ export interface BlockingComponent {
   shortfall: number;
 }
 
+export interface BomComponent {
+  material_id: string;
+  material_name: string;
+  health_status: string;
+  usable_qty: number;
+  reorder_point: number;
+  safety_stock: number;
+  qty_per_unit: number;
+  net_shortfall: number;
+  is_blocking: boolean;
+  has_inventory_data: boolean;
+}
+
 export interface ProductBomRiskRow {
   product_id: string;
   product_name: string;
   plant_id: string;
   risk_status: string;
   blocking_components: BlockingComponent[];
+  all_components: BomComponent[];
   priority_score: number;
 }
+
+export interface MaterialUsageRow {
+  product_id: string;
+  product_name: string;
+  plant_id: string;
+  risk_status: string;
+  qty_per_unit: number;
+  is_blocking: boolean;
+}
+
 
 export const api = {
   summary: () => request<DashboardSummary>("/api/dashboard/summary"),
   productRisk: () => request<ProductRiskRow[]>("/api/dashboard/product-risk"),
-  productBomRisk: () => request<ProductBomRiskRow[]>("/api/dashboard/product-bom-risk"),
+  productBomRisk: (params?: { plantId?: string; healthStatus?: string }) => {
+    const q = new URLSearchParams();
+    if (params?.plantId) q.set("plant_id", params.plantId);
+    if (params?.healthStatus) q.set("health_status", params.healthStatus);
+    const qs = q.toString();
+    return request<ProductBomRiskRow[]>(`/api/dashboard/product-bom-risk${qs ? `?${qs}` : ""}`);
+  },
+  materialUsage: (materialId: string, plantId?: string) =>
+    request<MaterialUsageRow[]>(
+      `/api/dashboard/material-usage/${encodeURIComponent(materialId)}${plantId ? `?plant_id=${encodeURIComponent(plantId)}` : ""}`
+    ),
   materials: (params?: { status?: string; risky_only?: boolean }) => {
+
     const q = new URLSearchParams();
     if (params?.status) q.set("status", params.status);
     if (params?.risky_only) q.set("risky_only", "true");

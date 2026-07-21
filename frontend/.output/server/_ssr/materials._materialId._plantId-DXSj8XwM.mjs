@@ -1,12 +1,12 @@
 import { o as require_jsx_runtime } from "../_libs/@radix-ui/react-arrow+[...].mjs";
-import { i as cn, n as Button, r as api } from "./api-BvsAdfBD.mjs";
-import { i as CardTitle, n as CardContent, r as CardHeader, t as Card } from "./card-DNn1texp.mjs";
+import { i as cn, n as Button, r as api } from "./api-CvgU3YZp.mjs";
+import { i as CardTitle, n as CardContent, r as CardHeader, t as Card } from "./card-FWEPwnHu.mjs";
 import { L as ArrowLeft, N as Calendar, R as Activity, _ as Package, a as TrendingDown, d as ShoppingCart, f as Shield, p as ShieldAlert, r as Upload, u as Sparkles, x as Lock } from "../_libs/lucide-react.mjs";
 import { _ as useParams, g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { t as Skeleton } from "./skeleton-coEUFSch.mjs";
-import { i as DropdownMenuTrigger, n as DropdownMenuContent, r as DropdownMenuItem, t as DropdownMenu } from "./dropdown-menu-nNcayZpm.mjs";
+import { t as Skeleton } from "./skeleton-CTfZ-LAW.mjs";
+import { i as DropdownMenuTrigger, n as DropdownMenuContent, r as DropdownMenuItem, t as DropdownMenu } from "./dropdown-menu-BFkmOnnx.mjs";
 import { n as useQuery } from "../_libs/tanstack__react-query.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/materials._materialId._plantId-Odt-r3TO.js
+//#region node_modules/.nitro/vite/services/ssr/assets/materials._materialId._plantId-DXSj8XwM.js
 var import_jsx_runtime = require_jsx_runtime();
 function MaterialDetailPage() {
 	const { materialId, plantId } = useParams({ from: "/materials/$materialId/$plantId" });

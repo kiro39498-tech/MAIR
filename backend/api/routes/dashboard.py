@@ -25,8 +25,9 @@ from analytics.projection import project_material_balance
 from analytics.po_analysis import analyze_po_coverage
 from analytics.replenishment import draft_recommendations, recommend_for_material
 from analytics.inventory_calc import get_days_of_supply
-from analytics.product_bom_risk import get_product_risk
-from models.schemas import ProductRiskRow, ProductBomRiskRow
+from analytics.product_bom_risk import get_product_risk, get_products_for_material
+from models.schemas import ProductRiskRow, ProductBomRiskRow, MaterialUsageRow
+
 
 router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
 
@@ -113,23 +114,37 @@ def product_risk(plant_id: str | None = None, health_status: str | None = None):
 
 @router.get("/product-bom-risk", response_model=list[ProductBomRiskRow])
 def product_bom_risk(plant_id: str | None = None, health_status: str | None = None):
+    """Return product BOM risk rows.
+
+    Default behaviour (no plant_id): each product is evaluated at its own
+    primary_plant_id only.  Pass plant_id to override and see a specific plant,
+    or plant_id=all to see every product × every plant combination.
+
+    health_status is an optional filter applied on top — pass e.g.
+    health_status=Shortage to see only at-risk rows.
+    """
     repo = get_repository()
     rows = []
-    
+
     for product in repo.products:
-        for plant in repo.plants:
-            if plant_id and plant.plant_id != plant_id:
-                continue
-                
-            risk_row = get_product_risk(repo, product.product_id, plant.plant_id)
+        # Determine which plant(s) to evaluate for this product
+        if plant_id and plant_id != "all":
+            plants_to_check = [plant_id]
+        elif plant_id == "all":
+            plants_to_check = [p.plant_id for p in repo.plants]
+        else:
+            # Default: primary plant only — avoids flooding the view with
+            # cross-plant rows where most BOM components have no local stock
+            plants_to_check = [product.primary_plant_id]
+
+        for pid in plants_to_check:
+            risk_row = get_product_risk(repo, product.product_id, pid)
             if not risk_row:
                 continue
-                
             if health_status and risk_row.risk_status != health_status:
                 continue
-                
             rows.append(risk_row)
-            
+
     # Sort by priority score descending
     rows.sort(key=lambda x: x.priority_score, reverse=True)
     return rows
@@ -200,3 +215,10 @@ def recommendation_detail(material_id: str, plant_id: str):
     if rec is None:
         raise HTTPException(404, f"No recommendation available for {material_id} at {plant_id}")
     return _rec_to_row(rec)
+
+
+@router.get("/material-usage/{material_id}", response_model=list[MaterialUsageRow])
+def material_usage(material_id: str, plant_id: str | None = None):
+    repo = get_repository()
+    return get_products_for_material(repo, material_id, plant_id)
+
