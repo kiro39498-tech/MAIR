@@ -25,30 +25,39 @@ _load_dotenv_if_present()
 
 class Settings:
     # --- Data source --------------------------------------------------
-    # Phase 1 uses the CSV connector. Swapping to SAP/SQL/Fabric later only
-    # means implementing a new Connector (see connectors/base_connector.py)
-    # and changing DATA_SOURCE — nothing above the connector layer changes.
+    # Supported: csv, excel, sqlserver, postgres, mysql, oracle, fabric, sap, hana, rest, blob, sharepoint
     data_source: str = os.getenv("DATA_SOURCE", "csv")
     csv_data_dir: str = os.getenv(
         "CSV_DATA_DIR", str(Path(__file__).resolve().parent.parent / "data" / "csv")
     )
+    excel_file: str | None = os.getenv("EXCEL_FILE")
+    
+    # SQL & Database Connectors (SQL Server, Postgres, MySQL, Oracle, Azure SQL)
+    sqlserver_connection_string: str | None = os.getenv("SQLSERVER_CONNECTION_STRING") or os.getenv("DATABASE_URL")
+    
+    # Microsoft Fabric & Lakehouse Connectors
+    fabric_workspace_id: str | None = os.getenv("FABRIC_WORKSPACE_ID")
+    fabric_connection_string: str | None = os.getenv("FABRIC_CONNECTION_STRING")
+
+    # SAP ERP Connectors (ECC / S4HANA / HANA)
+    sap_ashost: str | None = os.getenv("SAP_ASHOST")
+    sap_sysnr: str | None = os.getenv("SAP_SYSNR", "00")
+    sap_client: str | None = os.getenv("SAP_CLIENT", "100")
+    sap_user: str | None = os.getenv("SAP_USER")
+    sap_password: str | None = os.getenv("SAP_PASSWORD")
+
+    # Persistence Database Path
     db_path: str = os.getenv(
         "DB_PATH", str(Path(__file__).resolve().parent.parent / "data" / "replenishment.db")
     )
 
     # --- Azure OpenAI ----------------------------------------------------
-    # Used only by agents for explanation / copilot wording — never for the
-    # deterministic calculations in analytics/. See core principle in the
-    # approach doc: "AI never performs inventory or manufacturing calculations."
     azure_openai_endpoint: str | None = os.getenv("AZURE_OPENAI_ENDPOINT")
     azure_openai_api_key: str | None = os.getenv("AZURE_OPENAI_API_KEY")
     azure_openai_api_version: str = os.getenv("AZURE_OPENAI_API_VERSION", "preview")
     azure_openai_deployment: str = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4o")
 
     # --- MCP ---------------------------------------------------------------
-    # Phase 1 spawns the MCP server as a local stdio subprocess from the
-    # agents. Swap to MCPStreamableHTTPTool + mcp_server_url once the MCP
-    # server is deployed as its own service.
     mcp_server_command: str = os.getenv("MCP_SERVER_COMMAND", "python")
     mcp_server_args: list[str] = ["-m", "mcp_server.server"]
 
@@ -72,9 +81,7 @@ class Settings:
     smtp_password: str | None = os.getenv("SMTP_PASSWORD")
     notify_statuses: set[str] = {"Shortage"}
 
-
     # --- Business thresholds (deterministic engine tuning knobs) --------
-    # See analytics/health_classification.py for how these are applied.
     shortage_ratio_of_safety_stock: float = 0.4
     near_reorder_lower_ratio_of_rop: float = 0.9
     near_reorder_upper_ratio_of_rop: float = 1.3

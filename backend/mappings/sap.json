@@ -1,0 +1,46 @@
+{
+  "materials": {
+    "MATNR": "material_id",
+    "MAKTX": "material_name",
+    "MTART": "material_type",
+    "MEINS": "unit_of_measure",
+    "STPRS": "standard_cost",
+    "ABCIN": "abc_class"
+  },
+  "inventory": {
+    "MATNR": "material_id",
+    "WERKS": "plant_id",
+    "LGORT": "warehouse_id",
+    "LABST": "unrestricted_qty",
+    "INSME": "quality_hold_qty",
+    "SPEME": "blocked_qty",
+    "EINME": "reserved_qty"
+  },
+  "bom": {
+    "STLNR": "bom_id",
+    "MATNR_PARENT": "product_id",
+    "IDNRK": "material_id",
+    "MENGE": "quantity_per_unit",
+    "STLAL": "bom_version"
+  },
+  "purchase_orders": {
+    "EBELN": "po_id",
+    "EBELP": "po_line",
+    "MATNR": "material_id",
+    "LIFNR": "supplier_id",
+    "WERKS": "plant_id",
+    "MENGE": "order_qty",
+    "BSMNG": "open_qty",
+    "NETPR": "unit_price",
+    "BEDAT": "order_date",
+    "EINDT": "expected_receipt_date"
+  },
+  "production_orders": {
+    "AUFNR": "production_order_id",
+    "MATNR": "product_id",
+    "WERKS": "plant_id",
+    "GAMNG": "order_qty",
+    "GSTRS": "start_date",
+    "GLTRS": "due_date"
+  }
+}

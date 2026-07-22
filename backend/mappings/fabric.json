@@ -1,0 +1,18 @@
+{
+  "materials": {
+    "MaterialSK": "material_id",
+    "MaterialDescription": "material_name",
+    "Category": "material_type",
+    "UOM": "unit_of_measure",
+    "UnitCost": "standard_cost"
+  },
+  "inventory": {
+    "MaterialSK": "material_id",
+    "FacilityID": "plant_id",
+    "StorageLoc": "warehouse_id",
+    "OnHandQty": "unrestricted_qty",
+    "HoldQty": "quality_hold_qty",
+    "QuarantineQty": "blocked_qty",
+    "AllocatedQty": "reserved_qty"
+  }
+}

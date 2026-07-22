@@ -109,18 +109,17 @@ def main() -> None:
     save("inventory_policies.csv", fields, rows)
 
     # ── bom.csv ────────────────────────────────────────────────────
-    # qty_per_unit is a ratio (e.g. 1.034 units of material per unit of product)
-    # Rounding to int would collapse many to 1 or 0 — round to 2 dp instead.
     fields, rows = load("bom.csv")
-    out = []
+    rows = [round_row(r, ID_COLS) for r in rows]
+    # Ensure quantity_per_unit is at least 1 (rounding 0.x to 0 would make
+    # a component disappear from the BOM entirely)
     for row in rows:
-        r2 = dict(row)
         try:
-            r2["quantity_per_unit"] = str(round(float(row["quantity_per_unit"]), 2))
-        except (ValueError, TypeError):
+            if int(row["quantity_per_unit"]) < 1:
+                row["quantity_per_unit"] = "1"
+        except (ValueError, KeyError):
             pass
-        out.append(r2)
-    save("bom.csv", fields, out)
+    save("bom.csv", fields, rows)
 
     # ── supplier_materials.csv ─────────────────────────────────────
     fields, rows = load("supplier_materials.csv")

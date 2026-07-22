@@ -1,0 +1,18 @@
+{
+  "materials": {
+    "MaterialCode": "material_id",
+    "MaterialName": "material_name",
+    "Type": "material_type",
+    "UnitOfMeasure": "unit_of_measure",
+    "Cost": "standard_cost"
+  },
+  "inventory": {
+    "MaterialCode": "material_id",
+    "PlantCode": "plant_id",
+    "WarehouseCode": "warehouse_id",
+    "AvailableQty": "unrestricted_qty",
+    "HoldQty": "quality_hold_qty",
+    "BlockedQty": "blocked_qty",
+    "ReservedQty": "reserved_qty"
+  }
+}
